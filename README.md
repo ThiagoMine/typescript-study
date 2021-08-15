@@ -6,10 +6,10 @@
 <article>
     <p>   
         Qual das alternativas abaixo importa corretamente um módulo nativo do EcmaScript? <br>
-        A) <script module="app/app.js"></script><br>
-        B) <script module src="app/app.js"></script> - <b>Correta</b><br>
-        C) <script type="module" src="app/app.js"></script><br>
-        D) <script type="script" src="app/app.js"></script><br>
+        A) <code><script module="app/app.js"></script></code><br>
+        B) <code><script module src="app/app.js"></script> - <b>Correta</b></code><br>
+        C) <code><script type="module" src="app/app.js"></script></code><br>
+        D) <code><script type="script" src="app/app.js"></script></code><br>
     </p>
 </article>
 
@@ -29,22 +29,22 @@
     <p>   
         No paradigma da orientação a objetos criamos a representação de algo do mundo real em nosso programa através de modelos e esses modelos são definidos através de classes.<br>
         Marque a alternativa que cria corretamente uma classe usando o ECMASCRIPT 2015:<br>
-        A) class Pessoa {<br>
+        A) <code>class Pessoa {<br>
             constructor(nome, idade) {<br>
                 this.nome = nome;<br>
                 this.idade = idade;<br>
             }<br>
-        } - Correta<br>
-        B) class Pessoa {<br>
+        }</code> - Correta<br>
+        B) <code>class Pessoa {<br>
             Pessoa(nome, idade) {<br>
                 this.nome = nome;<br>
                 this.idade = idade;<br>
             }<br>
-        }<br>
-        C) class Pessoa {<br><br>
+        }</code><br>
+        C) <code>class Pessoa {<br><br>
             nome;<br>
             idade;<br>
-        }<br>
+        }</code><br>
     </p>
 </article>
 
