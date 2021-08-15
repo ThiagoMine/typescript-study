@@ -2,12 +2,15 @@
 
 <h2>Aula 1</h2>
 
-06 - Importação de módulo nativo do ECMAScript
-Qual das alternativas abaixo importa corretamente um módulo nativo do EcmaScript?
-A) <script module="app/app.js"></script>
-B) <script module src="app/app.js"></script> - Correta
-C) <script type="module" src="app/app.js"></script>
-D) <script type="script" src="app/app.js"></script>
+<h3> 06 - Importação de módulo nativo do ECMAScript </h3>
+<article>
+    Qual das alternativas abaixo importa corretamente um módulo nativo do EcmaScript?
+    A) <script module="app/app.js"></script>
+    B) <script module src="app/app.js"></script> - Correta
+    C) <script type="module" src="app/app.js"></script>
+    D) <script type="script" src="app/app.js"></script>
+</article>
+
 
 08 - Módulo e seu escopo
 Qual das alternativas abaixo é verdadeira sobre o scopo de um módulo?
