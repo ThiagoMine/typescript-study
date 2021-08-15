@@ -141,3 +141,14 @@
         Isso gera o comando <code>npm run start</code>, que fica observando os arquivos ts quando houver alterações esse já compila o mesmo automaticamente e faz o refresh da página do navegador<br>
     </p>
 </article>
+
+<h3> 09 O modificador private </h3>
+<article>
+    <p>   
+        Substituir # pelo _ adicionando o private<br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
