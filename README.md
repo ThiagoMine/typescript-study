@@ -4,52 +4,65 @@
 
 <h3> 06 - Importação de módulo nativo do ECMAScript </h3>
 <article>
-    Qual das alternativas abaixo importa corretamente um módulo nativo do EcmaScript?
-    A) <script module="app/app.js"></script>
-    B) <script module src="app/app.js"></script> - Correta
-    C) <script type="module" src="app/app.js"></script>
-    D) <script type="script" src="app/app.js"></script>
+    <p>   
+        Qual das alternativas abaixo importa corretamente um módulo nativo do EcmaScript? <br>
+        A) <script module="app/app.js"></script><br>
+        B) <script module src="app/app.js"></script> - <b>Correta</b><br>
+        C) <script type="module" src="app/app.js"></script><br>
+        D) <script type="script" src="app/app.js"></script><br>
+    </p>
 </article>
 
+<h3> 08 - Módulo e seu escopo </h3>
+<article>
+    <p>   
+        Qual das alternativas abaixo é verdadeira sobre o scopo de um módulo?<br>
+        A) Módulos do ECMAScript não existem na verdade, tudo é considerado um script.<br>
+        B) Tudo o que for declarado dentro de um módulo estará confinado nesse módulo, ao menos que o desenvolvedor decida exportar uma ou mais funcionalidades. - Correta<br>
+        C) Tudo que for declarado dentro de um módulo é automaticamente visível para outros módulos.<br>
+        D) Tudo o que for declarado dentro de um módulo, mesmo que o desenvolvedor queira dar visibilidade, não é passível de importação por outros módulos.<br>
+    </p>
+</article>
 
-08 - Módulo e seu escopo
-Qual das alternativas abaixo é verdadeira sobre o scopo de um módulo?
-A) Módulos do ECMAScript não existem na verdade, tudo é considerado um script.
-B) Tudo o que for declarado dentro de um módulo estará confinado nesse módulo, ao menos que o desenvolvedor decida exportar uma ou mais funcionalidades. - Correta
-C) Tudo que for declarado dentro de um módulo é automaticamente visível para outros módulos.
-D) Tudo o que for declarado dentro de um módulo, mesmo que o desenvolvedor queira dar visibilidade, não é passível de importação por outros módulos.
+<h3> 09 ES2015 e classes </h3>
+<article>
+    <p>   
+        No paradigma da orientação a objetos criamos a representação de algo do mundo real em nosso programa através de modelos e esses modelos são definidos através de classes.<br>
+        Marque a alternativa que cria corretamente uma classe usando o ECMASCRIPT 2015:<br>
+        A) class Pessoa {<br>
+            constructor(nome, idade) {<br>
+                this.nome = nome;<br>
+                this.idade = idade;<br>
+            }<br>
+        } - Correta<br>
+        B) class Pessoa {<br>
+            Pessoa(nome, idade) {<br>
+                this.nome = nome;<br>
+                this.idade = idade;<br>
+            }<br>
+        }<br>
+        C) class Pessoa {<br><br>
+            nome;<br>
+            idade;<br>
+        }<br>
+    </p>
+</article>
 
-09 ES2015 e classes
-No paradigma da orientação a objetos criamos a representação de algo do mundo real em nosso programa através de modelos e esses modelos são definidos através de classes.
-Marque a alternativa que cria corretamente uma classe usando o ECMASCRIPT 2015:
-A) class Pessoa {
-    constructor(nome, idade) {
-        this.nome = nome;
-        this.idade = idade;
-    }
-} - Correta
-B) class Pessoa {
-    Pessoa(nome, idade) {
-        this.nome = nome;
-        this.idade = idade;
-    }
-}
-C) class Pessoa {
-    nome;
-    idade;
-}
+<h3> Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        Introdução ao projeto e sua estrutura<br>
+        Um pouco sobre módulos do ECMASCRIPT<br>
+        Modelagem de uma Negociação em Javascript<br>
+        Buracos em nossa modelagem por limitações da linguagem Javascript<br>
+    </p>
+</article>
 
+<hr>
 
-Nesta aula, aprendemos:
-Introdução ao projeto e sua estrutura
-Um pouco sobre módulos do ECMASCRIPT
-Modelagem de uma Negociação em Javascript
-Buracos em nossa modelagem por limitações da linguagem Javascript
+<h2>Aula 2</h2>
 
-
-===========================================================================================================================================================================
-
-Aula 2
 
 03 Sobre o compilador do TypeScript
 Temos as seguintes afirmações a respeito do compilador do TypeScript:
@@ -61,9 +74,6 @@ Sobre as afirmativas anteriores, podemos dizer que:
 A) 3 e 4 são falsas.
 B) 1 e 3 são verdadeiras.
 C) 1 e 2 são falsas. - Correta
-
-04
-Intalar typescript
 
 
 05 Configuração básica do compilador
