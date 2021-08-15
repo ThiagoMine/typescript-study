@@ -29,22 +29,22 @@
     <p>   
         No paradigma da orientação a objetos criamos a representação de algo do mundo real em nosso programa através de modelos e esses modelos são definidos através de classes.<br>
         Marque a alternativa que cria corretamente uma classe usando o ECMASCRIPT 2015:<br>
-        A) <code>class Pessoa {<br>
-            constructor(nome, idade) {<br>
-                this.nome = nome;<br>
-                this.idade = idade;<br>
-            }<br>
-        }</code> - <b>Correta</b><br>
-        B) <code>class Pessoa {<br>
-            Pessoa(nome, idade) {<br>
-                this.nome = nome;<br>
-                this.idade = idade;<br>
-            }<br>
-        }</code><br>
-        C) <code>class Pessoa {<br><br>
-            nome;<br>
-            idade;<br>
-        }</code><br>
+        A) <code>class Pessoa {</code><br>
+        <code>&nbsp;constructor(nome, idade) {</code><br>
+        <code>&nbsp;&nbsp;this.nome = nome;</code><br>
+        <code>&nbsp;&nbsp;this.idade = idade;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code> - <b>Correta</b><br>
+        B) <code>class Pessoa {</code><br>
+        <code>&nbsp;Pessoa(nome, idade) {</code><br>
+        <code>&nbsp;&nbsp;this.nome = nome;</code><br>
+        <code>&nbsp;&nbsp;this.idade = idade;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+        C)         <code>class Pessoa {</code><br>
+        <code>&nbsp;nome;</code><br>
+        <code>&nbsp;idade;</code><br>
+        <code> }</code><br>
     </p>
 </article>
 
