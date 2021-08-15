@@ -60,3 +60,17 @@ C) 1 e 2 são falsas. - Correta
 
 Intalar typescript
 
+
+05 Configuração básica do compilador
+Nome do arquivo: tsconfig.json - na raiz do projeto
+{
+    "compilerOptions": { 
+        "outDir": "dist/js", // Diretório de saída do JS
+        "target": "ES6"      // Action script do JS
+    },
+    "include": [
+        "app/**/*"           // Diretório fonte do TS
+    ]
+}
+No package.json criar o script: "compile": "tsc"
+então teremos o comando: npm run compile
