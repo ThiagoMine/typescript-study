@@ -104,3 +104,9 @@ C) A propriedade "include" indica para o compilador onde os arquivos resultantes
         "app/**/*"
     ]
 }
+
+08 Automatizando a compilação de arquivos
+No package.json criar o script: "watch": "tsc -w"
+Isso gera o comando npm run watch, que fica observando os arquivos ts quando houver alterações esse já compila o mesmo automaticamente
+No package.json criar o script: "start": "concurrently \"npm run watch\" \"npm run server\"",
+Isso gera o comando npm run start, que fica observando os arquivos ts quando houver alterações esse já compila o mesmo automaticamente e faz o refresh da página do navegador
