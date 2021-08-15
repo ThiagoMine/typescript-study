@@ -56,3 +56,7 @@ Sobre as afirmativas anteriores, podemos dizer que:
 A) 3 e 4 são falsas.
 B) 1 e 3 são verdadeiras.
 C) 1 e 2 são falsas. - Correta
+
+
+Intalar typescript
+
