@@ -82,15 +82,15 @@
 <article>
     <p>   
         Nome do arquivo: tsconfig.json - na raiz do projeto<br>
-        <code>{<br></code>
-        <code>&nbsp;"compilerOptions": { <br></code>
-        <code>&nbsp;&nbsp;"outDir": "dist/js", // Diretório de saída do JS<br></code>
-        <code>&nbsp;&nbsp;"target": "ES6"      // Action script do JS<br></code>
-        <code>&nbsp;},<br></code>
-        <code>&nbsp;"include": [<br></code>
-        <code>&nbsp;&nbsp;"app/**/*"           // Diretório fonte do TS<br></code>
-        <code>&nbsp;]<br></code>
-        <code>}<br></code>
+        <code>{</code><br>
+        <code>&nbsp;"compilerOptions": { </code><br>
+        <code>&nbsp;&nbsp;"outDir": "dist/js", // Diretório de saída do JS</code><br>
+        <code>&nbsp;&nbsp;"target": "ES6"      // Action script do JS</code><br>
+        <code>&nbsp;},</code><br>
+        <code>&nbsp;"include": [</code><br>
+        <code>&nbsp;&nbsp;"app/**/*" // Diretório fonte do TS</code><br>
+        <code>&nbsp;]</code><br>
+        <code>}</code><br>
         No package.json criar o script: <code>"compile": "tsc"</code><br>
         então teremos o comando: <code>npm run compile</code><br>
     </p>
