@@ -57,7 +57,7 @@ A) 3 e 4 são falsas.
 B) 1 e 3 são verdadeiras.
 C) 1 e 2 são falsas. - Correta
 
-
+04
 Intalar typescript
 
 
@@ -74,3 +74,21 @@ Nome do arquivo: tsconfig.json - na raiz do projeto
 }
 No package.json criar o script: "compile": "tsc"
 então teremos o comando: npm run compile
+
+
+06 O arquivo tsconfig.json
+Temos a seguinte declaração do arquivo tsconfig.json:
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "outDir": "dist/js",    
+    },
+    "include": [
+        "app/**/*"
+    ]
+}
+Marque a alternativa a respeito da configuração:
+A) A propriedade "target" indica para o compilator tsc (TypeScript Compiler) para qual versão do Javascript o código escrito em TypeScript deve ser compilado. Isso significa que o resultado final será arquivos Javascript sem qualquer referência para a sintaxe do Typescript. - Correta
+B) A propriedade "outDir" indica para o compilador onde estão os arquivos ".ts" que ele deve compilar.
+C) A propriedade "include" indica para o compilador onde os arquivos resultantes da compilação de arquivos ".ts" serão salvos.
+
