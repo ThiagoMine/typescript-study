@@ -92,3 +92,15 @@ A) A propriedade "target" indica para o compilator tsc (TypeScript Compiler) par
 B) A propriedade "outDir" indica para o compilador onde estão os arquivos ".ts" que ele deve compilar.
 C) A propriedade "include" indica para o compilador onde os arquivos resultantes da compilação de arquivos ".ts" serão salvos.
 
+
+07 Aprimorando a configuração
+{
+    "compilerOptions": {
+        "outDir": "dist/js",
+        "target": "ES6",
+        "noEmitOnError": true // Impede que os arquivos JS sejam criados enquanto houverem erros no arquivo TS/compilação
+    },
+    "include": [
+        "app/**/*"
+    ]
+}
