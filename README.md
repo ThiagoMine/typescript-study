@@ -149,6 +149,50 @@
     </p>
 </article>
 
-<b>Correta</b>
-
-&nbsp;
+<h3> 10 TypeScript e classes </h3>
+<article>
+    <p>   
+        O TypeScript é um superset da ES2015, ou seja, além de suportar os recurso da linguagem desta versão, adiciona outros. Um exemplo é o suporte ao modificador private.<br>
+        Marque a opção na qual há um erro de compilação do TypeScript de acesso indevido a uma propriedade privada.<br>
+        A) <br>
+        <code>class Pessoa {</code><br>
+<br>
+        <code>&nbsp;private _nome;</code><br>
+        <code>&nbsp;_idade;</code><br>
+<br>
+        <code>&nbsp;constructor(nome, idade) {</code><br>
+        <code>&nbsp;&nbsp;this._nome = nome;</code><br>
+        <code>&nbsp;&nbsp;this._idade = idade;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+<br>
+        <code>let pessoa = new Pessoa('Danilo', 30);</code><br>
+        <code>pessoa._idade = 20;</code><br>
+        B) <br>
+        <code>class Pessoa {</code><br>
+<br>
+        <code>&nbsp;private nome;</code><br>
+        <code>&nbsp;idade;</code><br>
+<br>
+        <code>&nbsp;constructor(nome, idade) {</code><br>
+        <code>&nbsp;&nbsp;this.nome = nome;</code><br>
+        <code>&nbsp;&nbsp;this.idade = idade;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+<br>
+        <code>let pessoa = new Pessoa('Barney', 18);</code><br>
+        <code>pessoa.nome = 'Martin';</code><br> - <b>Correta</b>
+        C) <br>
+        <code>class Pessoa {</code><br>
+<br>
+        <code>&nbsp;private nome;</code><br>
+<br>
+        <code>&nbsp;constructor(nome, idade) {</code><br>
+        <code>&nbsp;&nbsp;this._nome = nome;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+<br>
+        <code>let pessoa = new Pessoa('Milan', 25);</code><br>
+        <code>pessoa._idade = 10; </code><br>
+    </p>
+</article>
