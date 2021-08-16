@@ -397,3 +397,33 @@
     </p>
 </article>
 
+<h3> 09 Convertendo dados de entrada </h3>
+<article>
+    <p>   
+        Finalizando fix do controller, arrumando os tipos da negociação, segue código<br>
+        <code>import { Negociacao } from "../models/negociacao.js"; // atenção ao JS</code><br>
+<code></code><br>
+        <code>export class NegociacaoController{</code><br>
+        <code>&nbsp;private inputData: HTMLInputElement;</code><br>
+        <code>&nbsp;private inputQuantidade: HTMLInputElement;</code><br>
+        <code>&nbsp;private inputValor: HTMLInputElement;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor () {</code><br>
+        <code>&nbsp;&nbsp;this.inputData          = document.querySelector('#data');</code><br>
+        <code>&nbsp;&nbsp;this.inputQuantidade    = document.querySelector('#quantidade');</code><br>
+        <code>&nbsp;&nbsp;this.inputValor         = document.querySelector('#valor');</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;adiciona() {</code><br>
+        <code>&nbsp;&nbsp;const exp = /-/g;</code><br>
+        <code>&nbsp;&nbsp;const date = new Date(this.inputData.value.replace(exp, ','));</code><br>
+        <code>&nbsp;&nbsp;const quantidade = parseInt(this.inputQuantidade.value);</code><br>
+        <code>&nbsp;&nbsp;const valor = parseFloat(this.inputValor.value);</code><br>
+        <code>&nbsp;&nbsp;const negociacao = new Negociacao(date, quantidade, valor);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;console.log(negociacao);</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
