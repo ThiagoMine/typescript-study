@@ -632,3 +632,13 @@
     </p>
 </article>
 
+<h3> 08 O modificador readonly </h3>
+<article>
+    <p>   
+        A fim de melhorar a semantica do código usamos o tipo ReadonlyArray, e não a tecnica de spread.<br>
+        <code>lista():ReadonlyArray<Negociacao> {</code><br>
+        <code>&nbsp;return this.negociacoes; // Spread operator cria um novo array com os dados do array dentro do comando</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
