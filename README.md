@@ -647,11 +647,21 @@
     <p>   
         Marque a opção que declara um array e que não disponibilize a remoção ou inclusão de novos items. Selecione uma alternativa<br>
         A) <code>const nomes: Readonly<string> = ['a', 'b', 'c'];</code><br>
-        B) <code>const nomes: ReadonlyArray<string> = ['a', 'b', 'c'];</code><br>
+        B) <code>const nomes: ReadonlyArray<string> = ['a', 'b', 'c'];</code><br> - <b>Correta</b>
         C) <code>const nomes: ArrayReadonly<string> = ['a', 'b', 'c'];</code><br>
     </p>
 </article>
 
-<b>Correta</b>
+<h3> 10 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;Modelagem da classe Negociacoes<br>
+        &nbsp;Utiliação de Generics<br>
+        &nbsp;Revisão sobre encapsulamento<br>
+        &nbsp;Questões de mutabilidade e como solucioná-la<br>
+        &nbsp;O tipo ReadonlyArray<br>
+        &nbsp;Adição de negociações em nossa lista<br>
+    </p>
+</article>
 
-&nbsp;
