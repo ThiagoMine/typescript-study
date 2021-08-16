@@ -282,4 +282,38 @@
     </p>
 </article>
 
-
+<h3> 05 O tipo implícito any </h3>
+<article>
+    <p>   
+        Ativando a tipagem no compilador, ou seja, obrigando a utilização de tipagens, alteração de código:<br>
+        No arquivo tsconfig.json dentro do array compilerOptions passamos a seguinte config <code> "noImplicitAny": true </code><br>
+        Isso causou uma série de erros em negociacao.ts e negociacao-controller.ts, segue código alterado para arrumar o negociação.ts<br>
+        <code>export class Negociacao {</code><br>
+        <code>&nbsp;private _data: Date;</code><br>
+        <code>&nbsp;private _quantidade: number;</code><br>
+        <code>&nbsp;private _valor: number;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor(data: Date, quantidade: number, valor: number) { // O tipo vem depois</code><br>
+        <code>&nbsp;&nbsp;this._data = data;</code><br>
+        <code>&nbsp;&nbsp;this._quantidade = quantidade;</code><br>
+        <code>&nbsp;&nbsp;this._valor = valor;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get data() {</code><br>
+        <code>&nbsp;&nbsp;return this._data;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get quantidade() {</code><br>
+        <code>&nbsp;&nbsp;return this._quantidade;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get valor() {</code><br>
+        <code>&nbsp;&nbsp;return this._valor;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get volume() {</code><br>
+        <code>&nbsp;&nbsp;return this._quantidade * this._valor;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
