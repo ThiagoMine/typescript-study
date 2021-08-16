@@ -236,3 +236,19 @@
         <code>}</code><br>
     </p>
 </article>
+
+<h3> 03 Integração com o formulário </h3>
+<article>
+    <p>   
+        Realizando a integração com o formulário no app.ts, segue código gerado:<br>
+        <code>import { NegociacaoController } from "./controllers/negociacao-controller.js"; //Atentar para colocar o .js no auto complete</code><br>
+<code></code><br>
+        <code>const controller = new NegociacaoController();</code><br>
+        <code>const form = document.querySelector('.form');</code><br>
+        <code>form.addEventListener('submit', event => {</code><br>
+        <code>&nbsp;event.preventDefault(); // Previne o Refresh da página, que seria uma ação default do formulário</code><br>
+        <code>&nbsp;controller.adiciona();</code><br>
+        <code>});</code><br>
+    </p>
+</article>
+
