@@ -851,6 +851,14 @@
     </p>
 </article>
 
-<b>Correta</b>
-
-&nbsp;
+<h3> 09 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;Nova maneira de declaração de array com generics<br>
+        &nbsp;O tipo ReadonlyArray<br>
+        &nbsp;O modificador readonly<br>
+        &nbsp;Getters vs propriedades públicas em modo de leitura<br>
+        &nbsp;Programação defensiva<br>
+    </p>
+</article>
