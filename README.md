@@ -577,3 +577,51 @@
     </p>
 </article>
 
+<h3> 06 Um problema não esperado </h3>
+<article>
+    <p>   
+        Adicionando os métodos criados em negociações ao controller:<br>
+        <code>import { Negociacao } from "../models/negociacao.js"; // atenção ao JS</code><br>
+        <code>import { Negociacoes } from "../models/negociacoes.js";</code><br>
+<code></code><br>
+        <code>export class NegociacaoController{</code><br>
+        <code>&nbsp;private inputData: HTMLInputElement;</code><br>
+        <code>&nbsp;private inputQuantidade: HTMLInputElement;</code><br>
+        <code>&nbsp;private inputValor: HTMLInputElement;</code><br>
+        <code>&nbsp;private negociacoes = new Negociacoes();</code><br>
+<code></code><br>
+        <code>&nbsp;constructor () {</code><br>
+        <code>&nbsp;&nbsp;this.inputData          = document.querySelector('#data');</code><br>
+        <code>&nbsp;&nbsp;this.inputQuantidade    = document.querySelector('#quantidade');</code><br>
+        <code>&nbsp;&nbsp;this.inputValor         = document.querySelector('#valor');</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;adiciona(): void {</code><br>
+        <code>&nbsp;&nbsp;const negociacao = this.criaNegociuacao();        </code><br>
+        <code>&nbsp;&nbsp;this.negociacoes.adiciona(negociacao);</code><br>
+        <code>&nbsp;&nbsp;console.log(this.negociacoes.lista());</code><br>
+        <code>&nbsp;&nbsp;this.limparFormulario();</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;criaNegociuacao(): Negociacao {</code><br>
+        <code>&nbsp;&nbsp;const exp = /-/g;</code><br>
+        <code>&nbsp;&nbsp;const date = new Date(this.inputData.value.replace(exp, ','));</code><br>
+        <code>&nbsp;&nbsp;const quantidade = parseInt(this.inputQuantidade.value);</code><br>
+        <code>&nbsp;&nbsp;const valor = parseFloat(this.inputValor.value);</code><br>
+        <code>&nbsp;&nbsp;return new Negociacao(date, quantidade, valor);</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;limparFormulario(): void{</code><br>
+        <code>&nbsp;&nbsp;this.inputData.value = '';</code><br>
+        <code>&nbsp;&nbsp;this.inputQuantidade.value = '';</code><br>
+        <code>&nbsp;&nbsp;this.inputValor.value = '';</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;this.inputData.focus();</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
