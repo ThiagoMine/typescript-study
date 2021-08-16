@@ -563,3 +563,17 @@
     </p>
 </article>
 
+<h3> 05 Avançando com nosso modelo </h3>
+<article>
+    <p>   
+        Criando métodos adiciona e lista na model negociações:<br>
+        <code>adiciona(negociacao: Negociacao):void {</code><br>
+        <code>&nbsp;this.negociacoes.push(negociacao);</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>lista():Array<Negociacao> {</code><br>
+        <code>&nbsp;return this.negociacoes;</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
