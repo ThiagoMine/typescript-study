@@ -167,7 +167,7 @@
         <code>}</code><br>
 <br>
         <code>let pessoa = new Pessoa('Danilo', 30);</code><br>
-        <code>pessoa._idade = 20;</code><br>
+        <code>pessoa._idade = 20;</code><br><br>
         B) <br>
         <code>class Pessoa {</code><br>
 <br>
@@ -181,7 +181,7 @@
         <code>}</code><br>
 <br>
         <code>let pessoa = new Pessoa('Barney', 18);</code><br>
-        <code>pessoa.nome = 'Martin';</code><br> - <b>Correta</b>
+        <code>pessoa.nome = 'Martin';</code> - <b>Correta</b><br><br>
         C) <br>
         <code>class Pessoa {</code><br>
 <br>
@@ -196,3 +196,31 @@
         <code>pessoa._idade = 10; </code><br>
     </p>
 </article>
+
+<h3> 11 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:
+        &nbsp;Download do TypeScript
+        &nbsp;Configuração do compilador e papel do tsconfig.json
+        &nbsp;Integração com scripts do Node.js
+        &nbsp;Modificadores de accesso private e public
+        &nbsp;Benefícios iniciais da linguagem TypeScript<br>
+    </p>
+</article>
+
+<hr>
+
+<h2>Aula 3</h2>
+
+02 O controller de negociação
+<h3>  </h3>
+<article>
+    <p>   
+        <br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
