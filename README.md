@@ -824,7 +824,30 @@
 <h3> 07 Mais surpresas em nossa modelagem </h3>
 <article>
     <p>   
-        <br>
+        Mesmo no readonly a data pode ser alterada pois é um objeto que possui métodos que permitem a manipulação do valor.<br>
+    </p>
+</article>
+
+<h3> 08 Programação defensiva </h3>
+<article>
+    <p>   
+        Fazemos programação defensica para solucionar o problema anterior, segue código:<br>
+        <code>export class Negociacao {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;private _data: Date, </code><br>
+        <code>&nbsp;&nbsp;public readonly quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;public readonly valor: number</code><br>
+        <code>&nbsp;) {}</code><br>
+<code></code><br>
+        <code>&nbsp;get data():Date {</code><br>
+        <code>&nbsp;&nbsp;const data = new Date(this._data.getTime());</code><br>
+        <code>&nbsp;&nbsp;return data;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>&nbsp;</code><br>
+        <code>&nbsp;get volume(): number {</code><br>
+        <code>&nbsp;&nbsp;return this.quantidade * this.valor;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
     </p>
 </article>
 
