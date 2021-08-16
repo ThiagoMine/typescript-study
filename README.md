@@ -556,7 +556,7 @@
 <h3>  04 Sobre Array </h3>
 <article>
     <p>   
-        Marque apenas as opções que declaram um array corretamente em TypeScript, assumindo que a configuração noImplicitAny está definida com o valor true. Selecione 2 alternativas
+        Marque apenas as opções que declaram um array corretamente em TypeScript, assumindo que a configuração noImplicitAny está definida com o valor true. Selecione 2 alternativas<br>
         A) <code>let nomes: Array<string> = [];</code> - <b>Correta</b><br>
         B) <code>let idades: Array<Number> = [1, 2, 3];</code> - <b>Correta</b><br>
         C) <code>let salarios: Array = [5400.00, 2400.00, 7100.00];</code><br>
