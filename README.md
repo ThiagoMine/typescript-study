@@ -213,14 +213,26 @@
 
 <h2>Aula 3</h2>
 
-02 O controller de negociação
-<h3>  </h3>
+<h3> 02 O controller de negociação </h3>
 <article>
     <p>   
-        <br>
+        Criação do controler que lerá o formulário e criará o modelo, segue código gerado:<br>
+        <code>export class negociacaoController{</code><br>
+        <code>&nbsp;private inputData;</code><br>
+        <code>&nbsp;private inputQuantidade;</code><br>
+        <code>&nbsp;private inputValor;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor () {</code><br>
+        <code>&nbsp;&nbsp;this.inputData          = document.querySelector('#data');</code><br>
+        <code>&nbsp;&nbsp;this.inputQuantidade    = document.querySelector('#quantidade');</code><br>
+        <code>&nbsp;&nbsp;this.inputValor         = document.querySelector('#valor');</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;adiciona() {</code><br>
+        <code>&nbsp;&nbsp;console.log(this.inputData);</code><br>
+        <code>&nbsp;&nbsp;console.log(this.inputQuantidade);</code><br>
+        <code>&nbsp;&nbsp;console.log(this.inputValor);</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
     </p>
 </article>
-
-<b>Correta</b>
-
-&nbsp;
