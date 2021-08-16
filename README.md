@@ -647,7 +647,7 @@
     <p>   
         Marque a opção que declara um array e que não disponibilize a remoção ou inclusão de novos items. Selecione uma alternativa<br>
         A) <code>const nomes: Readonly<string> = ['a', 'b', 'c'];</code><br>
-        B) <code>const nomes: ReadonlyArray<string> = ['a', 'b', 'c'];</code><br> - <b>Correta</b>
+        B) <code>const nomes: ReadonlyArray<string> = ['a', 'b', 'c'];</code> - <b>Correta</b>
         C) <code>const nomes: ArrayReadonly<string> = ['a', 'b', 'c'];</code><br>
     </p>
 </article>
@@ -778,6 +778,45 @@
         <code>&nbsp;get volume(): number {</code><br>
         <code>&nbsp;&nbsp;return this.quantidade * this.valor;</code><br>
         <code>&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
+<h3> 06 Um pouco mais sobre readonly </h3>
+<article>
+    <p>   
+        Temos o seguinte código:<br>
+        <code>export class Fatura {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;private criadaEm: Date, </code><br>
+        <code>&nbsp;&nbsp;private quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;private valor: number</code><br>
+        <code>&nbsp;) {}</code><br>
+        <code>}</code><br>
+        Marque a opção que torna a propriedade criadaEm somente leitura.<br>
+        A) - <b>Correta</b> <br>
+        <code>export class Fatura {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;private readonly criadaEm: Date, </code><br>
+        <code>&nbsp;&nbsp;private quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;private valor: number</code><br>
+        <code>&nbsp;) {}</code><br>
+        <code>}</code><br>
+        B) <br>
+        <code>export class Fatura {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;readonly private criadaEm: Date, </code><br>
+        <code>&nbsp;&nbsp;private quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;private valor: number</code><br>
+        <code>&nbsp;) {}</code><br>
+        <code>}</code><br>
+        C) <br>
+        <code>export class Fatura {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;private criadaEm: readonly Date, </code><br>
+        <code>&nbsp;&nbsp;private quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;private valor: number</code><br>
+        <code>&nbsp;) {}</code><br>
         <code>}</code><br>
     </p>
 </article>
