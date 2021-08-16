@@ -317,3 +317,15 @@
         <code>}</code><br>
     </p>
 </article>
+
+<h3> 06 Sobre o tipo any </h3>
+<article>
+    <p>   
+        Marque apenas as opções verdadeiras sobre o tipo any. Selecione 2 alternativas<br>
+        &nbsp;A) Uma variável do tipo any só pode receber dados do tipo any.<br>
+        &nbsp;B) Por padrão, é assumido automaticamente pelo TypeScript quando não definimos o tipo das nossas variáveis. - <b>Correta</b><br>
+        &nbsp;C) É possível desativar o tipo implícito any passando uma configuração especial para o compilador no arquivo tsconfig.json. Isso fará com que o compilador emita um erro em todos os locais que o tipo any foi adotado implicitamente. - <b>Correta</b><br>
+        &nbsp;D) Favorece o compilador, inclusive IDE's a realizarem o autocomplete e a inferirem todos os métodos da variável.<br>
+    </p>
+</article>
+
