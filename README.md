@@ -499,3 +499,19 @@
     </p>
 </article>
 
+<h3> 12 Limpando o formulário </h3>
+<article>
+    <p>   
+        Limpando formulário e colocando focus no data, segue método criado no controller:<br>
+        <code>limparFormulario(): void{</code><br>
+        <code>&nbsp;this.inputData.value = '';</code><br>
+        <code>&nbsp;this.inputQuantidade.value = '';</code><br>
+        <code>&nbsp;this.inputValor.value = '';</code><br>
+<code></code><br>
+        <code>&nbsp;this.inputData.focus();</code><br>
+        <code>}</code><br>
+        No Método adiciona(), foi adiconanda o seguinte comando logo após a apresentação do resultado no console.log <br>
+        <code>this.limparFormulario();</code><br>
+    </p>
+</article>
+
