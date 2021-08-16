@@ -681,3 +681,52 @@
     </p>
 </article>
 
+<h3> 03 Construtor e atalho </h3>
+<article>
+    <p>   
+        Temos a seguinte declaração de classe:<br>
+        <code>export class Fatura {</code><br>
+<code></code><br>
+        <code>&nbsp;private criadaEm: Date;</code><br>
+        <code>&nbsp;private quantidade: number;</code><br>
+        <code>&nbsp;private valor: number;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;criadaEm: Date, </code><br>
+        <code>&nbsp;&nbsp;quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;valor: number</code><br>
+        <code>&nbsp;) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;this.criadaEm = creadaEm;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;this.quantidade = quantidade;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;this.valor = valor;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+        Marque a alternativa que declara a mesma classe utilizando o atalho que o TypeScript possui e que vimos na aula.<br>
+        A)  - <b>Correta</b><br>
+        <code>export class Fatura {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;private criadaEm: Date, </code><br>
+        <code>&nbsp;&nbsp;private quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;private valor: number</code><br>
+        <code>&nbsp;) {}</code><br>
+        <code>}</code><br>
+        B) <br>
+        <code>export class Fatura {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;criadaEm: Date, </code><br>
+        <code>&nbsp;&nbsp;quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;valor: number</code><br>
+        <code>&nbsp;) {}</code><br>
+        <code>}</code><br>
+        C) <br>
+        <code>export class Fatura {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;public criadaEm: Date, </code><br>
+        <code>&nbsp;&nbsp;public quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;public valor: number</code><br>
+        <code>&nbsp;) {}</code><br>
+        <code>}</code><br>
+<br>
+    </p>
+</article>
+
