@@ -7,7 +7,7 @@ export class Negociacoes{
         this.negociacoes.push(negociacao);
     }
 
-    lista():Array<Negociacao> {
-        return [...this.negociacoes]; // Spread operator cria um novo array com os dados do array dentro do comando
+    lista():ReadonlyArray<Negociacao> {
+        return this.negociacoes; // Spread operator cria um novo array com os dados do array dentro do comando
     }   
 }

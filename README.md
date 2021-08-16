@@ -642,3 +642,16 @@
     </p>
 </article>
 
+<h3> 09 Somente leitura </h3>
+<article>
+    <p>   
+        Marque a opção que declara um array e que não disponibilize a remoção ou inclusão de novos items. Selecione uma alternativa<br>
+        A) <code>const nomes: Readonly<string> = ['a', 'b', 'c'];</code><br>
+        B) <code>const nomes: ReadonlyArray<string> = ['a', 'b', 'c'];</code><br>
+        C) <code>const nomes: ArrayReadonly<string> = ['a', 'b', 'c'];</code><br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
