@@ -437,3 +437,65 @@
     </p>
 </article>
 
+<h3> 11 Organizando melhor nosso código </h3>
+<article>
+    <p>   
+        Melhorando o código e tipando os métodos do controller e do model<br>
+        Controller:<br>
+        <code>import { Negociacao } from "../models/negociacao.js"; // atenção ao JS</code><br>
+<code></code><br>
+        <code>export class NegociacaoController{</code><br>
+        <code>&nbsp;private inputData: HTMLInputElement;</code><br>
+        <code>&nbsp;private inputQuantidade: HTMLInputElement;</code><br>
+        <code>&nbsp;private inputValor: HTMLInputElement;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor () {</code><br>
+        <code>&nbsp;&nbsp;this.inputData          = document.querySelector('#data');</code><br>
+        <code>&nbsp;&nbsp;this.inputQuantidade    = document.querySelector('#quantidade');</code><br>
+        <code>&nbsp;&nbsp;this.inputValor         = document.querySelector('#valor');</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;adiciona(): void {</code><br>
+        <code>&nbsp;&nbsp;const negociacao = this.criaNegociuacao();        </code><br>
+        <code>&nbsp;&nbsp;console.log(negociacao);</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;criaNegociuacao(): Negociacao {</code><br>
+        <code>&nbsp;&nbsp;const exp = /-/g;</code><br>
+        <code>&nbsp;&nbsp;const date = new Date(this.inputData.value.replace(exp, ','));</code><br>
+        <code>&nbsp;&nbsp;const quantidade = parseInt(this.inputQuantidade.value);</code><br>
+        <code>&nbsp;&nbsp;const valor = parseFloat(this.inputValor.value);</code><br>
+        <code>&nbsp;&nbsp;return new Negociacao(date, quantidade, valor);</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+        Model:<br>
+        <code>export class Negociacao {</code><br>
+        <code>&nbsp;private _data: Date;</code><br>
+        <code>&nbsp;private _quantidade: number;</code><br>
+        <code>&nbsp;private _valor: number;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor(data: Date, quantidade: number, valor: number) { // O tipo vem depois</code><br>
+        <code>&nbsp;&nbsp;this._data = data;</code><br>
+        <code>&nbsp;&nbsp;this._quantidade = quantidade;</code><br>
+        <code>&nbsp;&nbsp;this._valor = valor;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get data(): Date {</code><br>
+        <code>&nbsp;&nbsp;return this._data;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get quantidade(): number {</code><br>
+        <code>&nbsp;&nbsp;return this._quantidade;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get valor(): number {</code><br>
+        <code>&nbsp;&nbsp;return this._valor;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get volume(): number {</code><br>
+        <code>&nbsp;&nbsp;return this._quantidade * this._valor;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
