@@ -821,3 +821,13 @@
     </p>
 </article>
 
+<h3> 07 Mais surpresas em nossa modelagem </h3>
+<article>
+    <p>   
+        <br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
