@@ -427,3 +427,13 @@
     </p>
 </article>
 
+<h3> 10 Conversão de data </h3>
+<article>
+    <p>   
+        Marque a opção correta que cria um objeto Date a partir de uma string: Selecione uma alternativa<br>
+        A) <code>const date = new Date('2021,2,20'); - <b>Correta</b></code><br>
+        A) <code>const date = new Date('2021-2-20');</code><br>
+        A) <code>const date = new Date('2021 2 20');</code><br>
+    </p>
+</article>
+
