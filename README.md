@@ -622,6 +622,13 @@
     </p>
 </article>
 
-<b>Correta</b>
+<h3> 07 Evitando a mutabilidade da lista </h3>
+<article>
+    <p>   
+        No formato anterior era possível alterar a lista de negociações pelo método lista, usa-se a princípio o spread operator para solucionar o problema, segue método lista() alterado:<br>
+        <code>lista():Array<Negociacao> {</code><br>
+        <code>&nbsp;return [...this.negociacoes]; // Spread operator cria um novo array com os dados do array dentro do comando</code><br>
+        <code>}  </code><br>
+    </p>
+</article>
 
-&nbsp;
