@@ -739,3 +739,49 @@
     </p>
 </article>
 
+<h3> 05 Mais sobre readonly </h3>
+<article>
+    <p>   
+        No model negociacao ao invés de usar os atributos como private, podemos usá-los como public porém usamos o readonly no construtor pos assim uma vez atribuido o valor neste construtor não é mais permitido altera-lo, o código era assim:<br>
+        <code>export class Negociacao {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;private _data: Date, </code><br>
+        <code>&nbsp;&nbsp;private _quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;private _valor: number</code><br>
+        <code>&nbsp;&nbsp;) {}</code><br>
+<code></code><br>
+        <code>&nbsp;get data(): Date {</code><br>
+        <code>&nbsp;&nbsp;return this._data;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get quantidade(): number {</code><br>
+        <code>&nbsp;&nbsp;return this._quantidade;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get valor(): number {</code><br>
+        <code>&nbsp;&nbsp;return this._valor;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;get volume(): number {</code><br>
+        <code>&nbsp;&nbsp;return this._quantidade * this._valor;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+        E Fica assim:<br>
+        <code>export class Negociacao {</code><br>
+        <code>&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;public readonly data: Date, </code><br>
+        <code>&nbsp;&nbsp;public readonly quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;public readonly valor: number</code><br>
+        <code>&nbsp;) {}</code><br>
+<code></code><br>
+        <code>&nbsp;</code><br>
+        <code>&nbsp;get volume(): number {</code><br>
+        <code>&nbsp;&nbsp;return this.quantidade * this.valor;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
