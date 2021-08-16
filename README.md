@@ -557,9 +557,9 @@
 <article>
     <p>   
         Marque apenas as opções que declaram um array corretamente em TypeScript, assumindo que a configuração noImplicitAny está definida com o valor true. Selecione 2 alternativas
-        A) <code>let nomes: Array<string> = [];</code><br> - <b>Correta</b>
-        A) <code>let idades: Array<Number> = [1, 2, 3];</code><br> - <b>Correta</b>
-        A) <code>let salarios: Array = [5400.00, 2400.00, 7100.00];</code><br>
+        A) <code>let nomes: Array<string> = [];</code> - <b>Correta</b><br>
+        B) <code>let idades: Array<Number> = [1, 2, 3];</code> - <b>Correta</b><br>
+        C) <code>let salarios: Array = [5400.00, 2400.00, 7100.00];</code><br>
     </p>
 </article>
 
