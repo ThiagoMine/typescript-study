@@ -730,3 +730,12 @@
     </p>
 </article>
 
+<h3> 04 Arrays e Generics </h3>
+<article>
+    <p>   
+        Simplificando declarações de tipo array<br>
+        <code>private negociacoes:Negociacao[] = []; // Negociacao[] = Array<Negociacao></code><br>
+        <code>lista(): readonly Negociacao[] { // readonly Negociacao[] = ReadonlyArray<Negociacao></code><br>
+    </p>
+</article>
+
