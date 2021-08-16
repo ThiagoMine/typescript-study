@@ -544,6 +544,18 @@
 <h3> 03 Primeiro contato com Generics </h3>
 <article>
     <p>   
+        Criando uma lista tipo Array de Negociação na classe Negociações:<br>
+        <code>import { Negociacao } from "./negociacao.js"; //atenção ao js no final</code><br>
+<code></code><br>
+        <code>export class Negociacoes{</code><br>
+        <code>&nbsp;private negociacoes:Array<Negociacao> = [];</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
+<h3>  </h3>
+<article>
+    <p>   
         <br>
     </p>
 </article>
