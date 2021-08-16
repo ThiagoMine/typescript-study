@@ -359,6 +359,41 @@
     </p>
 </article>
 
-<b>Correta</b>
+<h3> 08 Sobre o código </h3>
+<article>
+    <p>   
+        Marina configurou seu arquivo tsconfig.json da seguinte maneira:<br>
+        <code>{</code><br>
+        <code>&nbsp;"compilerOptions": {</code><br>
+        <code>&nbsp;&nbsp;"target": "es6",</code><br>
+        <code>&nbsp;&nbsp;"outDir": "app/js",</code><br>
+        <code>&nbsp;&nbsp;"noEmitOnError": true,</code><br>
+        <code>&nbsp;&nbsp;"noImplicitAny": false</code><br>
+        <code>&nbsp;},</code><br>
+        <code>&nbsp;"include": [</code><br>
+        <code>&nbsp;&nbsp;"app/ts/**/*"</code><br>
+        <code>&nbsp;]</code><br>
+        <code>}</code><br>
+        Em seguida declarou a seguinte classe<br>
+        <code>class Controller {</code><br>
+<code></code><br>
+        <code>private inputPreco: HTMLInputElement;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor() {</code><br>
+        <code>&nbsp;&nbsp;this.inputPreco = document.querySelector('#preco');</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;adiciona(event) {</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;event.preventDefault();</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;alert(this.inputPreco.value);</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+        Marque as alternativas verdadeiras a respeito da classe Controller.<br><br>
+        A) O código compila. - <b>Correta</b><br>
+        B) O código não compila.<br>
+        C) Não é um código TypeScript válido.<br>
+    </p>
+</article>
 
-&nbsp;
