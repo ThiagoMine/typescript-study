@@ -665,3 +665,19 @@
     </p>
 </article>
 
+<hr>
+
+<h2>Aula 5</h2>
+
+<h3> 02 Declaração no próprio construtor </h3>
+<article>
+    <p>   
+        Criando atributos direto no construtor: <br>
+        <code>constructor(</code><br>
+        <code>&nbsp;private _data: Date, </code><br>
+        <code>&nbsp;private _quantidade: number, </code><br>
+        <code>&nbsp;private _valor: number</code><br>
+        <code>) {}</code><br>
+    </p>
+</article>
+
