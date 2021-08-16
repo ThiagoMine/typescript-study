@@ -515,3 +515,15 @@
     </p>
 </article>
 
+<h3> 13 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;O tipo implícito any<br>
+        &nbsp;Benefícios da tipagem estática<br>
+        &nbsp;Mais configurações do compilador tsc<br>
+        &nbsp;Retorno de método explícito<br>
+        &nbsp;Conversão de valores da interface do usuário<br>
+    </p>
+</article>
+
