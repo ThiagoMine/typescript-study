@@ -527,3 +527,16 @@
     </p>
 </article>
 
+<hr>
+
+<h2>Aula 4</h2>
+
+<h3> 02 Modelo de uma lista de negociações </h3>
+<article>
+    <p>   
+        Iniciando a criação do modelo negociações:<br>
+        <code>export class Negociacoes{</code><br>
+        <code>&nbsp;private negociacoes = [];</code><br>
+        <code>}</code><br>
+    </p>
+</article>
