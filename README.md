@@ -916,3 +916,13 @@
     </p>
 </article>
 
+<h3> 06 Criando elementos do DOM dinamicamente </h3>
+<article>
+    <p>   
+        Utilizando a API do DOM, podemos criar elementos dinamicamente através de document.createElement ou:<br>
+        A) Através da propriedade innerHTML que aceita receber elementos do DOM.<br>
+        B) Através da propriedade innerHTML que recebe uma string que é convertida para elementos do DOM. - <b>Correta</b><br>
+        C) textContent, que aceita receber uma string que é convertida em elementos do DOM.<br>
+    </p>
+</article>
+
