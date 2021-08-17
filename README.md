@@ -900,6 +900,3 @@
     </p>
 </article>
 
-<b>Correta</b>
-
-&nbsp;
