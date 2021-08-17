@@ -862,3 +862,17 @@
         &nbsp;Programação defensiva<br>
     </p>
 </article>
+
+<hr>
+
+# typescript-study-2
+
+<h2>Aula 1</h2>
+
+<h3> 03 Modelo para o usuário </h3>
+<article>
+    <p>   
+        Apresentando o modelo de view que iremos usar. <br>
+    </p>
+</article>
+
