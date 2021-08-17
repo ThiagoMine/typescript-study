@@ -900,3 +900,46 @@
     </p>
 </article>
 
+<h3> 05 Integrando nossa view à página </h3>
+<article>
+    <p>   
+        Fazendo o render do template no HTML<br>
+        No index.html criamos uma div para receber a tabela a ser criada: <code><div id="negociacoes-view"></div></code><br>
+        No código da view criamos o método update e fazemos atravé do construtor um cache do elemento a ser alterado, segue código:<br>
+        <code>export class NegociacoesView {</code><br>
+<code></code><br>
+        <code>&nbsp;private elemento:HTMLElement;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor(seletor:string) {</code><br>
+        <code>&nbsp;&nbsp;this.elemento = document.querySelector(seletor);</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;update():void {</code><br>
+        <code>&nbsp;&nbsp;this.elemento.innerHTML = this.template();</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;template():string {</code><br>
+        <code>&nbsp;&nbsp;return `</code><br>
+        <code>&nbsp;&nbsp;&nbsp;<table class="table table-houver table-bordered"></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;<thead></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tr></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>DATA</th></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>QUANTIDADE</th></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>VALOR</th></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tr></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;</thead></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;<tbody></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;</tbody></code><br>
+        <code>&nbsp;&nbsp;&nbsp;</table></code><br>
+        <code>&nbsp;&nbsp;`;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+        No código da controller criamos um atributo para armazenar a classe view e no construtor da controller adicionamos uma chamada para o método update da view:<br>
+        <code>private negociacoesView = new NegociacoesView('#negociacoes-view');</code><br>
+        <code>his.negociacoesView.update();</code><br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&n&nbsp;

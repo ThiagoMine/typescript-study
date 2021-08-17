@@ -1,16 +1,11 @@
 export class NegociacoesView {
-
-    private elemento:HTMLElement;
-
-    constructor(seletor:string) {
+    constructor(seletor) {
         this.elemento = document.querySelector(seletor);
     }
-
-    update():void {
+    update() {
         this.elemento.innerHTML = this.template();
     }
-
-    template():string {
+    template() {
         return `
             <table class="table table-houver table-bordered">
                 <thead>
