@@ -876,3 +876,30 @@
     </p>
 </article>
 
+<h3>  </h3>
+<article>
+    <p>   
+        Iniciando o código da view:<br>
+        <code>export class NegociacoesView {</code><br>
+        <code>template():string {</code><br>
+        <code>&nbsp;return `</code><br>
+        <code>&nbsp;&nbsp;<table class="table table-houver table-bordered"></code><br>
+        <code>&nbsp;&nbsp;&nbsp;<thead></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;<tr></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>DATA</th></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>QUANTIDADE</th></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>VALOR</th></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;</tr></code><br>
+        <code>&nbsp;&nbsp;&nbsp;</thead></code><br>
+        <code>&nbsp;&nbsp;&nbsp;<tbody></code><br>
+        <code>&nbsp;&nbsp;&nbsp;</tbody></code><br>
+        <code>&nbsp;&nbsp;</table></code><br>
+        <code>&nbsp;`;</code><br>
+        <code>}</code><br>
+    }
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
