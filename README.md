@@ -926,3 +926,10 @@
     </p>
 </article>
 
+<h3> 07 Revisando nossos passos </h3>
+<article>
+    <p>   
+        Revisão dos passos 3 ao 6<br>
+    </p>
+</article>
+
