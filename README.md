@@ -1079,3 +1079,14 @@
     </p>
 </article>
 
+<h3> 11 - Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;Inpiração no React para criação de templates declarativos e dinâmicos<br>
+        &nbsp;Manipulação declarativa do DOM através de template<br>
+        &nbsp;Template dinâmico<br>
+        &nbsp;Formatação de datas usando Intl<br>
+    </p>
+</article>
+
