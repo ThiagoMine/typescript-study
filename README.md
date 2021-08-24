@@ -1069,3 +1069,13 @@
     </p>
 </article>
 
+<h3> 10 Formatando a data </h3>
+<article>
+    <p>   
+        1 - Usando a classe Intl para formatar a data<br><br>
+        Alteração de código do template:<br>
+        de: <code><td>?</td></code><br>
+        para: <code><td>${new Intl.DateTimeFormat().format(negociacao.data)}</td></code><br>
+    </p>
+</article>
+
