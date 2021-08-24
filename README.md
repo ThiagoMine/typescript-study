@@ -1025,3 +1025,47 @@
     </p>
 </article>
 
+<h3>  </h3>
+<article>
+    <p>   
+        Guga escreveu o seguinte código:<br>
+        <code>let vogais: string[] = ['a', 'e', 'i', 'o', 'u'];</code><br>
+        <code>let template = `</code><br>
+<code></code><br>
+        <code>    <ul></code><br>
+        <code>        ${</code><br>
+        <code>            vogais.map(vogal => </code><br>
+        <code>                `</code><br>
+        <code>                    <li>${vogal.toUpperCase()}</li></code><br>
+        <code>                `</code><br>
+        <code>            ).join('')</code><br>
+        <code>        }</code><br>
+        <code>    </ul></code><br>
+        <code>`;</code><br>
+        <code>console.log(template);</code><br><br>
+        A saída de console.log exibirá:<br><br>
+        A-) - <b>Correta</b><br>
+        <code><ul></code><br>
+        <code>&nbsp;<li>A</li>   </code><br>
+        <code>&nbsp;<li>E</li>     </code><br>
+        <code>&nbsp;<li>I</li>      </code><br>
+        <code>&nbsp;<li>O</li>      </code><br>
+        <code>&nbsp;<li>U</li>    </code><br>
+        <code></ul></code><br><br>
+        B-)<br>
+        <code><ul></code><br>
+        <code>&nbsp;<li>a</li>     </code><br>
+        <code>&nbsp;<li>e</li>      </code><br>
+        <code>&nbsp;<li>i</li>    </code><br>
+        <code>&nbsp;<li>o</li>     </code><br>
+        <code>&nbsp;<li>u</li>  </code><br>
+        <code></ul></code><br><br>
+        C-)<br>
+        <code><li>A</li></code><br>
+        <code><li>E</li></code><br>
+        <code><li>I</li></code><br>
+        <code><li>O</li></code><br>
+        <code><li>U</li></code><br>
+    </p>
+</article>
+
