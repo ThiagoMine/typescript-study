@@ -946,83 +946,82 @@
         <code>import { NegociacoesView } from "../views/negociacoes-view.js";</code><br>
 <code></code><br>
         <code>export class NegociacaoController{</code><br>
-        <code>    private inputData: HTMLInputElement;</code><br>
-        <code>    private inputQuantidade: HTMLInputElement;</code><br>
-        <code>    private inputValor: HTMLInputElement;</code><br>
-        <code>    private negociacoes = new Negociacoes();</code><br>
-        <code>    private negociacoesView = new NegociacoesView('#negociacoes-view');</code><br>
+        <code>&nbsp;private inputData: HTMLInputElement;</code><br>
+        <code>&nbsp;private inputQuantidade: HTMLInputElement;</code><br>
+        <code>&nbsp;private inputValor: HTMLInputElement;</code><br>
+        <code>&nbsp;private negociacoes = new Negociacoes();</code><br>
+        <code>&nbsp;private negociacoesView = new NegociacoesView('#negociacoes-view');</code><br>
 <code></code><br>
-        <code>    constructor () {</code><br>
-        <code>        this.inputData          = document.querySelector('#data');</code><br>
-        <code>        this.inputQuantidade    = document.querySelector('#quantidade');</code><br>
-        <code>        this.inputValor         = document.querySelector('#valor');</code><br>
-        <code>        this.negociacoesView.update(this.negociacoes);</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;constructor () {</code><br>
+        <code>&nbsp;&nbsp;this.inputData          = document.querySelector('#data');</code><br>
+        <code>&nbsp;&nbsp;this.inputQuantidade    = document.querySelector('#quantidade');</code><br>
+        <code>&nbsp;&nbsp;this.inputValor         = document.querySelector('#valor');</code><br>
+        <code>&nbsp;&nbsp;this.negociacoesView.update(this.negociacoes);</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    adiciona(): void {</code><br>
-        <code>        const negociacao = this.criaNegociuacao();        </code><br>
-        <code>        this.negociacoes.adiciona(negociacao);</code><br>
-        <code>        this.negociacoesView.update(this.negociacoes);</code><br>
-        <code>        this.limparFormulario();</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;adiciona(): void {</code><br>
+        <code>&nbsp;&nbsp;const negociacao = this.criaNegociuacao();        </code><br>
+        <code>&nbsp;&nbsp;this.negociacoes.adiciona(negociacao);</code><br>
+        <code>&nbsp;&nbsp;this.negociacoesView.update(this.negociacoes);</code><br>
+        <code>&nbsp;&nbsp;this.limparFormulario();</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    criaNegociuacao(): Negociacao {</code><br>
-        <code>        const exp = /-/g;</code><br>
-        <code>        const date = new Date(this.inputData.value.replace(exp, ','));</code><br>
-        <code>        const quantidade = parseInt(this.inputQuantidade.value);</code><br>
-        <code>        const valor = parseFloat(this.inputValor.value);</code><br>
-        <code>        return new Negociacao(date, quantidade, valor);</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;criaNegociuacao(): Negociacao {</code><br>
+        <code>&nbsp;&nbsp;const exp = /-/g;</code><br>
+        <code>&nbsp;&nbsp;const date = new Date(this.inputData.value.replace(exp, ','));</code><br>
+        <code>&nbsp;&nbsp;const quantidade = parseInt(this.inputQuantidade.value);</code><br>
+        <code>&nbsp;&nbsp;const valor = parseFloat(this.inputValor.value);</code><br>
+        <code>&nbsp;&nbsp;return new Negociacao(date, quantidade, valor);</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    limparFormulario(): void{</code><br>
-        <code>        this.inputData.value = '';</code><br>
-        <code>        this.inputQuantidade.value = '';</code><br>
-        <code>        this.inputValor.value = '';</code><br>
+        <code>&nbsp;limparFormulario(): void{</code><br>
+        <code>&nbsp;&nbsp;this.inputData.value = '';</code><br>
+        <code>&nbsp;&nbsp;this.inputQuantidade.value = '';</code><br>
+        <code>&nbsp;&nbsp;this.inputValor.value = '';</code><br>
 <code></code><br>
-        <code>        this.inputData.focus();</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;&nbsp;this.inputData.focus();</code><br>
+        <code>&nbsp;}</code><br>
         <code>}</code><br><br>
         Código da View:<br>
         <code>import { Negociacoes } from "../models/negociacoes.js";</code><br>
 <code></code><br>
         <code>export class NegociacoesView {</code><br>
 <code></code><br>
-        <code>    private elemento:HTMLElement;</code><br>
+        <code>&nbsp;private elemento:HTMLElement;</code><br>
 <code></code><br>
-        <code>    constructor(seletor:string) {</code><br>
-        <code>        this.elemento = document.querySelector(seletor);</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;constructor(seletor:string) {</code><br>
+        <code>&nbsp;&nbsp;this.elemento = document.querySelector(seletor);</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    update(model: Negociacoes):void {</code><br>
-        <code>        this.elemento.innerHTML = this.template(model);</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;update(model: Negociacoes):void {</code><br>
+        <code>&nbsp;&nbsp;this.elemento.innerHTML = this.template(model);</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    template(model: Negociacoes):string {</code><br>
-        <code>        return `</code><br>
-        <code>            <table class="table table-houver table-bordered"></code><br>
-        <code>                <thead></code><br>
-        <code>                    <tr></code><br>
-        <code>                        <th>DATA</th></code><br>
-        <code>                        <th>QUANTIDADE</th></code><br>
-        <code>                        <th>VALOR</th></code><br>
-        <code>                    </tr></code><br>
-        <code>                </thead></code><br>
-        <code>                <tbody></code><br>
-        <code>                    ${model.lista().map(negociacao => {</code><br>
-        <code>                        return `</code><br>
-        <code>                            <tr></code><br>
-        <code>                                <td>?</td></code><br>
-        <code>                                <td>${negociacao.quantidade}</td></code><br>
-        <code>                                <td>${negociacao.valor}</td></code><br>
-        <code>                            </tr></code><br>
-        <code>                        `</code><br>
-        <code>                    }).join(' ')}</code><br>
-        <code>                </tbody></code><br>
-        <code>            </table></code><br>
-        <code>        `;</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;template(model: Negociacoes):string {</code><br>
+        <code>&nbsp;&nbsp;return `</code><br>
+        <code>&nbsp;&nbsp;&nbsp;<table class="table table-houver table-bordered"></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;<thead></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tr></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>DATA</th></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>QUANTIDADE</th></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th>VALOR</th></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tr></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;</thead></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;<tbody></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${model.lista().map(negociacao => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return `</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tr></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>?</td></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>${negociacao.quantidade}</td></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>${negociacao.valor}</td></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tr></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}).join(' ')}</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;</tbody></code><br>
+        <code>&nbsp;&nbsp;&nbsp;</table></code><br>
+        <code>&nbsp;&nbsp;`;</code><br>
+        <code>&nbsp;}</code><br>
         <code>}</code><br>
     </p>
 </article>
 
-&nbsp;
