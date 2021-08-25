@@ -1477,3 +1477,14 @@
     </p>
 </article>
 
+<h3> 13 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;Herança com TypeScript<br>
+        &nbsp;Classes com tipo genérico<br>
+        &nbsp;Classes abstratas<br>
+        &nbsp;O modificador protected<br>
+    </p>
+</article>
+
