@@ -1090,7 +1090,6 @@
     </p>
 </article>
 
-
 <hr>
 
 <h2>Aula 2</h2>
@@ -1485,6 +1484,20 @@
         &nbsp;Classes com tipo genérico<br>
         &nbsp;Classes abstratas<br>
         &nbsp;O modificador protected<br>
+    </p>
+</article>
+
+<hr>
+
+<h2>Aula 3</h2>
+
+<h3> 02 Visibilidade do método template </h3>
+<article>
+    <p>   
+        1 - Restringindo o uso do método template para somente a classe pai e as classes filhas: <br>
+        view.ts: <code>protected abstract template(model: T):string;</code><br> 
+        negociacoes-view.ts: <code>protected template(model: Negociacoes):string {</code>
+        mensagem-view.ts: <code>protected  template(model: string):string {</code>
     </p>
 </article>
 
