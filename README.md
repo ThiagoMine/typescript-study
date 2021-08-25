@@ -1129,3 +1129,10 @@
     </p>
 </article>
 
+<h3> 03 Repetição de código </h3>
+<article>
+    <p>   
+        Identifica a repetição de Código nas views<br>
+    </p>
+</article>
+
