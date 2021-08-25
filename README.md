@@ -1394,3 +1394,16 @@
     </p>
 </article>
 
+<h3> 10 Classe abstrata </h3>
+<article>
+    <p>   
+        1 - Transformando view em uma classe abstrata para que a mesma não possa ser instânciada:<br>
+        <code>export abstract class View&lt;T&gt;{</code><br><br>
+        2 - Transformando o método template em abstrato, faz com que seja obrigatório a implementação deste na classe filha:<br>
+        <code>abstract template(model: T):string;</code><br><br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
