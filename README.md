@@ -1090,3 +1090,42 @@
     </p>
 </article>
 
+
+<hr>
+
+<h2>Aula 2</h2>
+
+<h3> 02 Mensagem view </h3>
+<article>
+    <p>   
+        1 - Cria view da mensagem:<br>
+        Código:<br>
+        <code>export class MensagemView {</code><br>
+<code></code><br>
+        <code>&nbsp;private element: HTMLElement;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor (seletor: string) {</code><br>
+        <code>&nbsp;&nbsp;this.element = document.querySelector(seletor);</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;template(model: string):string {</code><br>
+        <code>&nbsp;&nbsp;return `</code><br>
+        <code>&nbsp;&nbsp;&nbsp;<p class="alert alert-info">${model }</p></code><br>
+        <code>&nbsp;&nbsp;`;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;update(model: string): void {</code><br>
+        <code>&nbsp;&nbsp;const template = this.template(model);</code><br>
+        <code>&nbsp;&nbsp;this.element.innerHTML = template;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br><br>
+        2 - Cria propriedade para o Message view na controller:<br>
+        Código:<br>
+        Na importação de Classes: <code>import { MensagemView } from "../views/mensagem-view.js";</code><br>
+        Na declaração de propriedades: <code>private messageView = new MensagemView("#mensagemView");</code><br><br>
+        3 - Cria elemento no HTML:div id="mensagemView"<br>
+        4 - Chama reinderização do elemento no click do botão por meio da View:<br>
+        <code>this.messageView.update('Negociação adicionada com sucesso!');<code><br>
+    </p>
+</article>
+
