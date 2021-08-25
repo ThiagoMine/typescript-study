@@ -1257,3 +1257,28 @@
     </p>
 </article>
 
+<h3> 08 Avançando no uso de Generics </h3>
+<article>
+    <p>   
+        1 - Transformando o parametro model em generics usando o tipo genérico &lt;T&gt; que é definido no extend:<br>
+        <code>export class View<T>{</code><br>
+<code></code><br>
+        <code>    protected elemento: HTMLElement;</code><br>
+<code></code><br>
+        <code>    constructor(seletor: string) {</code><br>
+        <code>        this.elemento = document.querySelector(seletor);</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    update(model: T): void {</code><br>
+        <code>        const template = this.template(model);</code><br>
+        <code>        this.elemento.innerHTML = template;</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    template(model: T):string {</code><br>
+        <code>        throw Error('Classe filha deve implementar o método template')</code><br>
+        <code>    }   </code><br>
+        <code>}        </code><br>
+    </p>
+</article>
+
+&nbsp;
