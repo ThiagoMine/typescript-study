@@ -1025,7 +1025,7 @@
     </p>
 </article>
 
-<h3>  </h3>
+<h3> 09 A arte do template string </h3>
 <article>
     <p>   
         Guga escreveu o seguinte código:<br>
@@ -1033,14 +1033,14 @@
         <code>let template = `</code><br>
 <code></code><br>
         <code>&nbsp;<ul></code><br>
-        <code>        ${</code><br>
-        <code>            vogais.map(vogal => </code><br>
-        <code>                `</code><br>
-        <code>                    <li>${vogal.toUpperCase()}</li></code><br>
-        <code>                `</code><br>
-        <code>            ).join('')</code><br>
-        <code>        }</code><br>
-        <code>    </ul></code><br>
+        <code>&nbsp;&nbsp;${</code><br>
+        <code>&nbsp;&nbsp;&nbsp;vogais.map(vogal => </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;`</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>${vogal.toUpperCase()}</li></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;`</code><br>
+        <code>&nbsp;&nbsp;&nbsp;).join('')</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;</ul></code><br>
         <code>`;</code><br>
         <code>console.log(template);</code><br><br>
         A saída de console.log exibirá:<br><br>
@@ -1166,43 +1166,43 @@
         Em termos de design, tanto Humano quanto Alienigena são humanóides, por isso herdam dessa classe:<br><br>
         <code>class Humanoide {</code><br>
 <code></code><br>
-        <code>    private _energia: number = 100;</code><br>
-        <code>    private _nome: string = '';</code><br>
+        <code>&nbsp;private _energia: number = 100;</code><br>
+        <code>&nbsp;private _nome: string = '';</code><br>
 <code></code><br>
-        <code>    get energia() {</code><br>
-        <code>        return this._energia;</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;get energia() {</code><br>
+        <code>&nbsp;&nbsp;return this._energia;</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    get nome() {</code><br>
-        <code>        return this._nome;</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;get nome() {</code><br>
+        <code>&nbsp;&nbsp;return this._nome;</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    set nome(nome) {</code><br>
-        <code>        this._nome = nome;</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;set nome(nome) {</code><br>
+        <code>&nbsp;&nbsp;this._nome = nome;</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
         <code>}</code><br>
 <code></code><br>
         <code>class Humano extends Humanoide {</code><br>
 <code></code><br>
-        <code>    private _idade: number = 0;</code><br>
+        <code>&nbsp;private _idade: number = 0;</code><br>
 <code></code><br>
-        <code>    get idade() {</code><br>
-        <code>        return this._idade;</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;get idade() {</code><br>
+        <code>&nbsp;&nbsp;return this._idade;</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    set idade(idade) {</code><br>
-        <code>        this._idade = idade;</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;set idade(idade) {</code><br>
+        <code>&nbsp;&nbsp;this._idade = idade;</code><br>
+        <code>&nbsp;}</code><br>
         <code>}</code><br>
 <code></code><br>
         <code>class Alienigena extends Humanoide {</code><br>
 <code></code><br>
-        <code>    private _energiaExtra: number = 100;</code><br>
+        <code>&nbsp;private _energiaExtra: number = 100;</code><br>
 <code></code><br>
-        <code>    get energia() {</code><br>
-        <code>        return this._energia + this._energiaExtra;</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;get energia() {</code><br>
+        <code>&nbsp;&nbsp;return this._energia + this._energiaExtra;</code><br>
+        <code>&nbsp;}</code><br>
         <code>}</code><br><br>
         Marque a alternativa verdadeira:<br>
         A-) A classe Humanoide não compila.<br>
@@ -1216,7 +1216,7 @@
     <p>   
         Temos o seguinte código:<br>
         <code>class Pai {</code><br>
-        <code>    private nome = '';</code><br>
+        <code>&nbsp;private nome = '';</code><br>
         <code>}</code><br>
 <code></code><br>
         <code>class Filha extends Pai {</code><br>
@@ -1325,8 +1325,8 @@
         A-) - <b>Correta</b><br>
         <code>class GenericDAO&lt;T, K&gt; {</code><br>
 <code></code><br>
-        <code>    adiciona(objeto: T): K {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
+        <code>&nbsp;adiciona(objeto: T): K {</code><br>
+        <code>&nbsp;/* implementação do método omitida */</code><br>
         <code>    }</code><br>
 <code></code><br>
         <code>    apaga(objeto: T): void {</code><br>
@@ -1439,6 +1439,41 @@
         A-)Não faz sentido haver instâncias de Boleto, pois a classe não define a implementação de geraCabecalho(). Essa responsabilidade é das classes filhas, mas nada obriga o desenvolvedor a implementá-las em tempo de desenvolvimento e só será avisado caso tenha esquecido de implementá-lo em tempo de execução, no runtime da aplicação. - <b>Correta</b><br>
         B-)As classes filhas são obrigadas em tempo de desenvolvimento a implementarem geraCabecalho(), caso contrário haverá um erro de compilação.<br>
         C-)A classe Boleto precisa implementar a lógica de geração do cabeçalho para que seja utilizada pelas classes filhas.<br>
+    </p>
+</article>
+
+<h3> 12 Classe abstrata </h3>
+<article>
+    <p>   
+        Fernanda, assim como Eduardo do exercío anterior, tem que lidar com a geração de boleto bancário para diversos bancos. Porém ela adotou uma abordagem diferente:<br>
+        <code>abstract class Boleto {</code><br>
+<code></code><br>
+        <code>geraLinhaDigitavel(): string {</code><br>
+        <code>&nbsp;/* lógica comum dos bancos */</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>abstract geraCabecalho(): string;</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>class BoletoBancoA extends Boleto {</code><br>
+<code></code><br>
+        <code>geraCabecalho(): string {</code><br>
+        <code>&nbsp;/* lógica de geração do cabeçalho do banco A */</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>class BoletoBancoB extends Boleto {</code><br>
+<code></code><br>
+        <code>geraCabecalho(): string {</code><br>
+        <code>&nbsp;/* lógica de geração do cabeçalho do banco B */</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>}</code><br>
+        Marque a afirmativa verdadeira a respeito do código de Eduardo.<br><br>
+        A-) Como Boleto agora é uma classe abstrata, não é possível criar instâncias desta classe. Isso faz sentido, porque a classe não sabe como o método geraCabecalho deve ser implementado. É responsabilidade das classes filhas a implementação do método. - <b>Correta</b><br>
+        B-) As classes filhas não obrigadas em tempo de desenvolvimento a implementarem geraCabecalho().<br>
+        C-) As classes filhas também precisa declarar o método geraCabecalho como abstract.<br>
     </p>
 </article>
 
