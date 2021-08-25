@@ -1404,6 +1404,41 @@
     </p>
 </article>
 
-<b>Correta</b>
+<h3> 11 Utilizando Herança </h3>
+<article>
+    <p>   
+        Eduardo tem que lidar com a geração de boleto bancário para diversos bancos. Contudo, apesar dos boletos serem muito parecidos, cada banco possui um cabeçalho diferente.<br>
+        Ele decidiu então escrever o seguinte código:<br>
+        <code>class Boleto {</code><br>
+<code></code><br>
+        <code>&nbsp;geraLinhaDigitavel(): string {</code><br>
+        <code>&nbsp;&nbsp;/* lógica comum dos bancos */</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;geraCabecalho(): string {</code><br>
+        <code>&nbsp;&nbsp;throw new Error('Você precisa implementar a cabeçalho');</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>class BoletoBancoA extends Boleto {</code><br>
+<code></code><br>
+        <code>&nbsp;geraCabecalho(): string {</code><br>
+        <code>&nbsp;&nbsp;/* lógica de geração do cabeçalho do banco A */</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>class BoletoBancoB extends Boleto {</code><br>
+<code></code><br>
+        <code>&nbsp;geraCabecalho(): string {</code><br>
+        <code>&nbsp;&nbsp;/* lógica de geração do cabeçalho do banco B */</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>}</code><br>
+        Marque a afirmativa verdadeira a respeito do código de Eduardo.<br><br>
+        A-)Não faz sentido haver instâncias de Boleto, pois a classe não define a implementação de geraCabecalho(). Essa responsabilidade é das classes filhas, mas nada obriga o desenvolvedor a implementá-las em tempo de desenvolvimento e só será avisado caso tenha esquecido de implementá-lo em tempo de execução, no runtime da aplicação. - <b>Correta</b><br>
+        B-)As classes filhas são obrigadas em tempo de desenvolvimento a implementarem geraCabecalho(), caso contrário haverá um erro de compilação.<br>
+        C-)A classe Boleto precisa implementar a lógica de geração do cabeçalho para que seja utilizada pelas classes filhas.<br>
+    </p>
+</article>
 
-&nbsp;
