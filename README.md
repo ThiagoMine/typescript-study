@@ -1552,3 +1552,20 @@
     </p>
 </article>
 
+<h3> 05 Aceitando apenas dias úteis </h3>
+<article>
+    <p>   
+        Fazendo validações para dias uteis no método adiciona da controller (em JS):<br>
+        <code>public adiciona(): void {</code><br>
+        <code>&nbsp;const negociacao = this.criaNegociuacao();        </code><br>
+        <code>&nbsp;if (negociacao.data.getDay() > 0 && negociacao.data.getDay() < 6) {</code><br>
+        <code>&nbsp;&nbsp;this.negociacoes.adiciona(negociacao);</code><br>
+        <code>&nbsp;&nbsp;this.atualizaView();</code><br>
+        <code>&nbsp;&nbsp;this.limparFormulario();    </code><br>
+        <code>&nbsp;} else {</code><br>
+        <code>&nbsp;&nbsp;this.messageView.update('Apenas negociações em dias úteis são aceitas!');</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
