@@ -1211,3 +1211,25 @@
     </p>
 </article>
 
+<h3> 06 Modificador de acesso </h3>
+<article>
+    <p>   
+        Temos o seguinte código:<br>
+        <code>class Pai {</code><br>
+        <code>    private nome = '';</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>class Filha extends Pai {</code><br>
+<code></code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>const filha = new Filha();</code><br>
+        <code>console.log(filha.nome);</code><br>
+        Marque as 2 opções verdadeiras sobre o código.<br><br>
+        A-) Mudar o modificador de acesso da propriedade nome de private para protected é uma solução garantindo apenas que classes filhas tenham acesso à propriedade. - <b>Correta</b><br>
+        B-) Mudar o modificador de acesso da propriedade nome de private para public é uma solução, porém qualquer parte do sistema poderá acessar essa propriedade. - <b>Correta</b><br>
+        C-) Mudar o modificador de acesso da propriedade nome de private para protected é uma solução, porém qualquer parte do sistema poderá acessar essa propriedade.<br>
+        D-) Mudar o modificador de acesso da propriedade nome de private para public é uma solução, garantindo que apenas as classes filhas tenham acesso à propriedade.<br>
+    </p>
+</article>
+
