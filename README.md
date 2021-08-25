@@ -1154,3 +1154,60 @@
     </p>
 </article>
 
+<h3> 05 Utilizando Herança </h3>
+<article>
+    <p>   
+        Mônica decidiu criar um jogo em JavaScript, mas optou por <br>utilizar TypeScript devido aos recursos extras da linguagem. Ela <br>criou três classes:<br>
+        <ul>
+            <li>Humanoide</li>
+            <li>Humano</li>
+            <li>Alienigena</li>
+        <ul>
+        Em termos de design, tanto Humano quanto Alienigena são humanóides, por isso herdam dessa classe:<br><br>
+        <code>class Humanoide {</code><br>
+<code></code><br>
+        <code>    private _energia: number = 100;</code><br>
+        <code>    private _nome: string = '';</code><br>
+<code></code><br>
+        <code>    get energia() {</code><br>
+        <code>        return this._energia;</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    get nome() {</code><br>
+        <code>        return this._nome;</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    set nome(nome) {</code><br>
+        <code>        this._nome = nome;</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>class Humano extends Humanoide {</code><br>
+<code></code><br>
+        <code>    private _idade: number = 0;</code><br>
+<code></code><br>
+        <code>    get idade() {</code><br>
+        <code>        return this._idade;</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    set idade(idade) {</code><br>
+        <code>        this._idade = idade;</code><br>
+        <code>    }</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>class Alienigena extends Humanoide {</code><br>
+<code></code><br>
+        <code>    private _energiaExtra: number = 100;</code><br>
+<code></code><br>
+        <code>    get energia() {</code><br>
+        <code>        return this._energia + this._energiaExtra;</code><br>
+        <code>    }</code><br>
+        <code>}</code><br><br>
+        Marque a alternativa verdadeira:<br>
+        A-) A classe Humanoide não compila.<br>
+        B-) A classe Alienigena não compila. - <b>Correta</b><br>
+        C-) A classe Humano não compila.<br>
+    </p>
+</article>
+
