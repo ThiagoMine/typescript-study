@@ -1569,3 +1569,15 @@
     </p>
 </article>
 
+<h3> 06 Sobre o objeto Date </h3>
+<article>
+    <p>   
+        <code>Temos a seguinte instância de date:</code><br>
+        <code>const date = new Date();</code><br>
+        <code>Marque a opção verdadeira que retorna corretamente o dia da semana.</code><br><br>
+        A-) <code>date.getDay()</code> - <b>Correta</b><br>
+        B-) <code>date.getDate()</code><br>
+        C-) <code>date.getDow()</code><br>
+    </p>
+</article>
+
