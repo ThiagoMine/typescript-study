@@ -1263,21 +1263,24 @@
         1 - Transformando o parametro model em generics usando o tipo genérico &lt;T&gt; que é definido no extend:<br>
         <code>export class View<T>{</code><br>
 <code></code><br>
-        <code>    protected elemento: HTMLElement;</code><br>
+        <code>&nbsp;protected elemento: HTMLElement;</code><br>
 <code></code><br>
-        <code>    constructor(seletor: string) {</code><br>
-        <code>        this.elemento = document.querySelector(seletor);</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;constructor(seletor: string) {</code><br>
+        <code>&nbsp;&nbsp;this.elemento = document.querySelector(seletor);</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    update(model: T): void {</code><br>
-        <code>        const template = this.template(model);</code><br>
-        <code>        this.elemento.innerHTML = template;</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;update(model: T): void {</code><br>
+        <code>&nbsp;&nbsp;const template = this.template(model);</code><br>
+        <code>&nbsp;&nbsp;this.elemento.innerHTML = template;</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    template(model: T):string {</code><br>
-        <code>        throw Error('Classe filha deve implementar o método template')</code><br>
-        <code>    }   </code><br>
-        <code>}        </code><br>
+        <code>&nbsp;template(model: T):string {</code><br>
+        <code>&nbsp;&nbsp;throw Error('Classe filha deve implementar o método template')</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br><br>
+        2 - Definindo o tipo &lt;T&gt; na classe filha<br>
+        mensagem: <code>export class MensagemView extends View&lt;string&gt;</code><br>
+        negociacoes: <code>export class NegociacoesView extends View&lt;Negociacoes&gt;</code><br>
     </p>
 </article>
 
