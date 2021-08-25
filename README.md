@@ -1501,3 +1501,46 @@
     </p>
 </article>
 
+<h3> 03 Métodos privados </h3>
+<article>
+    <p>   
+        1 - Criando método privado para a formatação de data na view negociacao:<br>
+        <code>import { Negociacoes } from "../models/negociacoes.js";<code><br>
+        <code>import { View } from "./view.js";<code><br>
+<code><code><br>
+        <code>export class NegociacoesView extends View<Negociacoes> {<code><br>
+        <code>&nbsp;protected template(model: Negociacoes):string {<code><br>
+        <code>&nbsp;&nbsp;return `<code><br>
+        <code>&nbsp;&nbsp;<table class="table table-houver table-bordered"><code><br>
+        <code>&nbsp;&nbsp;&nbsp;<thead><code><br>
+        <code>&nbsp;&nbsp;&nbsp;<tr><code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;<th>DATA</th><code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;<th>QUANTIDADE</th><code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;<th>VALOR</th><code><br>
+        <code>&nbsp;&nbsp;&nbsp;</tr><code><br>
+        <code>&nbsp;&nbsp;&nbsp;</thead><code><br>
+        <code>&nbsp;&nbsp;&nbsp;<tbody><code><br>
+        <code>&nbsp;&nbsp;&nbsp;${model.lista().map(negociacao => {<code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return `<code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;<tr><code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>${this.formatar(negociacao.data)}</td><code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>${negociacao.quantidade}</td><code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>${negociacao.valor}</td><code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;</tr><code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;`<code><br>
+        <code>&nbsp;&nbsp;&nbsp;}).join(' ')}<code><br>
+        <code>&nbsp;&nbsp;&nbsp;</tbody><code><br>
+        <code>&nbsp;&nbsp;</table><code><br>
+        <code>&nbsp;&nbsp;`;<code><br>
+        <code>&nbsp;}<code><br>
+<code><code><br>
+        <code>&nbsp;private formatar(data: Date) {<code><br>
+        <code>&nbsp;&nbsp;return new Intl.DateTimeFormat().format(data)<code><br>
+        <code>&nbsp;}<code><br>
+        <code>}<code><br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
