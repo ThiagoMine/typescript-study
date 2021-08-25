@@ -1047,17 +1047,17 @@
         A-) - <b>Correta</b><br>
         <code><ul></code><br>
         <code>&nbsp;<li>A</li>   </code><br>
-        <code>&nbsp;<li>E</li>     </code><br>
-        <code>&nbsp;<li>I</li>      </code><br>
-        <code>&nbsp;<li>O</li>      </code><br>
-        <code>&nbsp;<li>U</li>    </code><br>
+        <code>&nbsp;<li>E</li>&nbsp; </code><br>
+        <code>&nbsp;<li>I</li>&nbsp;  </code><br>
+        <code>&nbsp;<li>O</li>&nbsp;  </code><br>
+        <code>&nbsp;<li>U</li>&nbsp;</code><br>
         <code></ul></code><br><br>
         B-)<br>
         <code><ul></code><br>
-        <code>&nbsp;<li>a</li>     </code><br>
-        <code>&nbsp;<li>e</li>      </code><br>
-        <code>&nbsp;<li>i</li>    </code><br>
-        <code>&nbsp;<li>o</li>     </code><br>
+        <code>&nbsp;<li>a</li>&nbsp; </code><br>
+        <code>&nbsp;<li>e</li>&nbsp;  </code><br>
+        <code>&nbsp;<li>i</li>&nbsp;</code><br>
+        <code>&nbsp;<li>o</li>&nbsp; </code><br>
         <code>&nbsp;<li>u</li>  </code><br>
         <code></ul></code><br><br>
         C-)<br>
@@ -1327,69 +1327,69 @@
 <code></code><br>
         <code>&nbsp;adiciona(objeto: T): K {</code><br>
         <code>&nbsp;/* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    apaga(objeto: T): void {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;apaga(objeto: T): void {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    buscaPorId(id: K): T {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;buscaPorId(id: K): T {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    atualiza(objeto: T): void {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;atualiza(objeto: T): void {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    listaTodos(): T[] {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;listaTodos(): T[] {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
         <code>}</code><br>
         B-)<br>
         <code>class GenericDAO&lt;T&gt; {</code><br>
 <code></code><br>
-        <code>    adiciona(objeto: T): number {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;adiciona(objeto: T): number {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    apaga(objeto: T): void {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;apaga(objeto: T): void {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    buscaPorId(id: number): T {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;buscaPorId(id: number): T {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    atualiza(objeto: number): void {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;atualiza(objeto: number): void {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    listaTodos(): T[] {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;listaTodos(): T[] {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
         <code>}</code><br>
         C-)<br>
         <code>class GenericDAO&lt;K&gt; {</code><br>
 <code></code><br>
-        <code>    adiciona(objeto: Negociacao): K {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;adiciona(objeto: Negociacao): K {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    apaga(objeto: Negociacao): void {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;apaga(objeto: Negociacao): void {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    buscaPorId(id: K): T {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;buscaPorId(id: K): T {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    atualiza(objeto: Negociacao): void {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;atualiza(objeto: Negociacao): void {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
 <code></code><br>
-        <code>    listaTodos(): Negociacao[] {</code><br>
-        <code>        /* implementação do método omitida */</code><br>
-        <code>    }</code><br>
+        <code>&nbsp;listaTodos(): Negociacao[] {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
         <code>} </code><br>
     </p>
 </article>
