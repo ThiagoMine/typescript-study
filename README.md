@@ -1233,3 +1233,27 @@
     </p>
 </article>
 
+<h3> 07 Mais surpresas com Herança </h3>
+<article>
+    <p>   
+        1 - Reutilizando o método upate em view na classe pai: <br>
+        <code>export class View{</code><br>
+<code></code><br>
+        <code>&nbsp;protected elemento: HTMLElement;</code><br>
+<code></code><br>
+        <code>&nbsp;constructor(seletor: string) {</code><br>
+        <code>&nbsp;&nbsp;this.elemento = document.querySelector(seletor);</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;update(model: string): void {</code><br>
+        <code>&nbsp;&nbsp;const template = this.template(model);</code><br>
+        <code>&nbsp;&nbsp;this.elemento.innerHTML = template;</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;template(model: string):string {</code><br>
+        <code>&nbsp;&nbsp;throw Error('Classe filha deve implementar o método template')</code><br>
+        <code>&nbsp;}   </code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
