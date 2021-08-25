@@ -1541,3 +1541,14 @@
     </p>
 </article>
 
+<h3> 04 Centralizando updates em um único lugar </h3>
+<article>
+    <p>   
+        Cria método privado que agrupa as atualizações de view na controller:<br>
+        <code>private atualizaView(): void{</code>
+        <code>&nbsp;this.negociacoesView.update(this.negociacoes);</code>
+        <code>&nbsp;this.messageView.update('Negociação adicionada com sucesso!');</code>
+        <code>}</code>
+    </p>
+</article>
+
