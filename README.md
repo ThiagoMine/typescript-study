@@ -1032,7 +1032,7 @@
         <code>let vogais: string[] = ['a', 'e', 'i', 'o', 'u'];</code><br>
         <code>let template = `</code><br>
 <code></code><br>
-        <code>    <ul></code><br>
+        <code>&nbsp;<ul></code><br>
         <code>        ${</code><br>
         <code>            vogais.map(vogal => </code><br>
         <code>                `</code><br>
@@ -1284,4 +1284,113 @@
     </p>
 </article>
 
-&nbsp;
+<h3> 09 Dois tipos genéricos </h3>
+<article>
+    <p>   
+        Fernando utiliza muito o IndexedDB, um banco de dados que vive no próprio navegador. Com forte influência de padrões de projeto, decidiu criar um GenericDAO:<br>
+        <code>class GenericDAO {</code><br>
+<code></code><br>
+        <code>&nbsp;adiciona(objeto: Negociacao): number {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;apaga(objeto: Negociacao): void {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;buscaPorId(id: number): Negociacao {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;atualiza(objeto: Negociacao): void {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;listaTodos(): Negociacao[] {</code><br>
+        <code>&nbsp;&nbsp;/* implementação do método omitida */</code><br>
+        <code>&nbsp;}</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>// exemplo de uso</code><br>
+<code></code><br>
+        <code>let dao = new GenericDao();</code><br>
+        <code>let negociacao = new Negociacao(new Date(), 1, 200);</code><br>
+<code></code><br>
+        <code>// recebe o ID da negociação gerada</code><br>
+<code></code><br>
+        <code>let id = dao.adiciona(negociacao);</code><br>
+        <code>let negociacaoBuscada = dao.buscaPorId(id);</code><br><br>
+        O código escrito por Fernando não é genérico, pois esta amarrado ao tipo Negociacao. Além disso, o ID do elemento no IndexedDB pode ser um número ou uma string, e esse tipo esta fixo na definição da classe.<br>
+        Marque a opção que torna a classe realmente genérica, permitindo persistir outros tipos, inclusive a definir um outro tipo de ID.<br><br>
+        A-) - <b>Correta</b><br>
+        <code>class GenericDAO&lt;T, K&gt; {</code><br>
+<code></code><br>
+        <code>    adiciona(objeto: T): K {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    apaga(objeto: T): void {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    buscaPorId(id: K): T {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    atualiza(objeto: T): void {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    listaTodos(): T[] {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+        <code>}</code><br>
+        B-)<br>
+        <code>class GenericDAO&lt;T&gt; {</code><br>
+<code></code><br>
+        <code>    adiciona(objeto: T): number {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    apaga(objeto: T): void {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    buscaPorId(id: number): T {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    atualiza(objeto: number): void {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    listaTodos(): T[] {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+        <code>}</code><br>
+        C-)<br>
+        <code>class GenericDAO&lt;K&gt; {</code><br>
+<code></code><br>
+        <code>    adiciona(objeto: Negociacao): K {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    apaga(objeto: Negociacao): void {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    buscaPorId(id: K): T {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    atualiza(objeto: Negociacao): void {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+<code></code><br>
+        <code>    listaTodos(): Negociacao[] {</code><br>
+        <code>        /* implementação do método omitida */</code><br>
+        <code>    }</code><br>
+        <code>} </code><br>
+    </p>
+</article>
+
