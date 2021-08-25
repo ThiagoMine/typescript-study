@@ -1124,7 +1124,7 @@
         Na declaração de propriedades: <code>private messageView = new MensagemView("#mensagemView");</code><br><br>
         3 - Cria elemento no HTML:div id="mensagemView"<br>
         4 - Chama reinderização do elemento no click do botão por meio da View:<br>
-        <code>this.messageView.update('Negociação adicionada com sucesso!');<code><br>
+        <code>this.messageView.update('Negociação adicionada com sucesso!');</code><br>
     </p>
 </article>
 
