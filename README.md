@@ -1136,3 +1136,21 @@
     </p>
 </article>
 
+<h3> 04 Herança e pequena surpresa </h3>
+<article>
+    <p>   
+        1 - Criar view.ts contendo o atributo elemento e o contrutor:<br>
+        <code>export class View{<code></br>
+<code><code></br>
+        <code>&nbsp;protected elemento: HTMLElement;<code></br>
+<code><code></br>
+        <code>&nbsp;constructor(seletor: string) {<code></br>
+        <code>&nbsp;&nbsp;this.elemento = document.querySelector(seletor);<code></br>
+        <code>&nbsp;}<code></br>
+        <code>}<code></br>
+        </br>
+        2 - Remover os contrutores e os atributos view de negociações e mensagem view.<br>
+        </br>
+    </p>
+</article>
+
