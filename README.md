@@ -1109,7 +1109,7 @@
 <code></code><br>
         <code>&nbsp;template(model: string):string {</code><br>
         <code>&nbsp;&nbsp;return `</code><br>
-        <code>&nbsp;&nbsp;&nbsp;<p class="alert alert-info">${model }</p></code><br>
+        <code>&nbsp;&nbsp;&nbsp;${model }</code><br>
         <code>&nbsp;&nbsp;`;</code><br>
         <code>&nbsp;}</code><br>
 <code></code><br>
@@ -1541,6 +1541,3 @@
     </p>
 </article>
 
-<b>Correta</b>
-
-&nbsp;
