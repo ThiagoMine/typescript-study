@@ -1581,3 +1581,28 @@
     </p>
 </article>
 
+<h3> 07  Organizando melhor nosso código </h3>
+<article>
+    <p>   
+        1 - Melhorando código de validação do dia útil:<br>
+        Cria-se duas prpriedades para o valor de sabado e domingo (enum):<br>
+        <code>private SABADO = 6;</code><br>
+        <code>private DOMINGO = 0;</code><br>
+        Cria-se uma método para descobrir se é dia útil: <br>
+        <code>private diaUtil(data: Date): boolean {</code><br>
+        <code>&nbsp;return data.getDate() > this.DOMINGO && data.getDate() > this.SABADO;</code><br>
+        <code>}</code><br>
+        Altera-se o método adiciona: <br>
+        <code>public adiciona(): void {</code><br>
+        <code>&nbsp;const negociacao = this.criaNegociuacao();        </code><br>
+        <code>&nbsp;if (!this.diaUtil(negociacao.data)) {</code><br>
+        <code>&nbsp;&nbsp;this.messageView.update('Apenas negociações em dias úteis são aceitas!');</code><br>
+        <code>&nbsp;&nbsp;return;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>&nbsp;this.negociacoes.adiciona(negociacao);</code><br>
+        <code>&nbsp;this.atualizaView();</code><br>
+        <code>&nbsp;this.limparFormulario();</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
