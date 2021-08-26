@@ -1606,3 +1606,21 @@
     </p>
 </article>
 
+<h3> 08 Enumerations </h3>
+<article>
+    <p>   
+        1 - Criar enum dias da semana:<br>
+        <code>export enum DiasDaSemana{</code>
+        <code>&nbsp;DOMINGO,</code>
+        <code>&nbsp;SEGUNDA,</code>
+        <code>&nbsp;TERCA,</code>
+        <code>&nbsp;QUARTA,</code>
+        <code>&nbsp;QUINTA,</code>
+        <code>&nbsp;SEXTA,</code>
+        <code>&nbsp;SABADO</code>
+        <code>}</code>
+        2 - Utilizando a enum na controller:<br>
+        <code>return data.getDate() > DiasDaSemana.DOMINGO && data.getDate() > DiasDaSemana.SABADO;</code>
+    </p>
+</article>
+
