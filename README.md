@@ -1669,3 +1669,38 @@
     </p>
 </article>
 
+<hr>
+
+<h2>Aula 4</h2>
+
+<h3> 02 Isolando a lógica de conversão de entrada </h3>
+<article>
+    <p>   
+        Transferindo a lógica de conversão de valores para a model negociação:<br>
+        Na model negociacao cria-se o método criaDe:<br>
+        <code>public criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {</code><br>
+        <code>&nbsp;const exp = /-/g;</code><br>
+        <code>&nbsp;const date = new Date(dataString.replace(exp, ','));</code><br>
+        <code>&nbsp;const quantidade = parseInt(quantidadeString);</code><br>
+        <code>&nbsp;const valor = parseFloat(valorString);</code><br>
+        <code>&nbsp;return new Negociacao(date, quantidade, valor);</code><br>
+        <code>}</code><br><br>
+        Na negociacao-controller, remove-se o metodo criaNegociacao e altera-se o metodo adiciona a fim de chamar o método criaDe da model:<br>
+        <code>public adiciona(): void {</code><br>
+        <code>&nbsp;const negociacaoTemp = new Negociacao(null, 0, 0);</code><br>
+        <code>&nbsp;const negociacao = negociacaoTemp.criaDe(</code><br>
+        <code>&nbsp;&nbsp;this.inputData.value,</code><br>
+        <code>&nbsp;&nbsp;this.inputQuantidade.value,</code><br>
+        <code>&nbsp;&nbsp;this.inputValor.value</code><br>
+        <code>&nbsp;);        </code><br>
+        <code>&nbsp;if (!this.diaUtil(negociacao.data)) {</code><br>
+        <code>&nbsp;&nbsp;this.messageView.update('Apenas negociações em dias úteis são aceitas!');</code><br>
+        <code>&nbsp;&nbsp;return;</code><br>
+        <code>&nbsp;}</code><br>
+        <code>&nbsp;this.negociacoes.adiciona(negociacao);</code><br>
+        <code>&nbsp;this.atualizaView();</code><br>
+        <code>&nbsp;this.limparFormulario();</code><br>
+        <code>}</code><br>
+        </p>
+</article>
+
