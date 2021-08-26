@@ -1640,6 +1640,21 @@
     </p>
 </article>
 
-<b>Correta</b>
+<h3> 10 Sobre o valor da enum </h3>
+<article>
+    <p>   
+        Temos a seguinte enum:<br>
+        <code>enum MinhaEnum {</code><br>
+        <code>&nbsp;A,</code><br>
+        <code>&nbsp;B = 3,</code><br>
+        <code>&nbsp;C,</code><br>
+        <code>&nbsp;D,</code><br>
+        <code>&nbsp;F</code><br>
+        <code>}</code><br>
+        Qual o valor de MinhaEnum.D?<br><br>
+        A-) 6<br>
+        B-) 5 - <b>Correta</b> Alternativa correta! As enum começam de 0, porém, se modificarmos o valor de alguma das enum, os próximos valores passarão a contar a partir do novo valor.<br>
+        C-) 4<br>
+    </p>
+</article>
 
-&nbsp;
