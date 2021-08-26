@@ -1609,18 +1609,37 @@
 <h3> 08 Enumerations </h3>
 <article>
     <p>   
-        1 - Criar enum dias da semana:<br>
-        <code>export enum DiasDaSemana{</code>
-        <code>&nbsp;DOMINGO,</code>
-        <code>&nbsp;SEGUNDA,</code>
-        <code>&nbsp;TERCA,</code>
-        <code>&nbsp;QUARTA,</code>
-        <code>&nbsp;QUINTA,</code>
-        <code>&nbsp;SEXTA,</code>
-        <code>&nbsp;SABADO</code>
-        <code>}</code>
+        1 - Criar enum dias da semana (Enuns começam com 0):<br>
+        <code>export enum DiasDaSemana{</code><br>
+        <code>&nbsp;DOMINGO,</code><br>
+        <code>&nbsp;SEGUNDA,</code><br>
+        <code>&nbsp;TERCA,</code><br>
+        <code>&nbsp;QUARTA,</code><br>
+        <code>&nbsp;QUINTA,</code><br>
+        <code>&nbsp;SEXTA,</code><br>
+        <code>&nbsp;SABADO</code><br>
+        <code>}</code><br>
         2 - Utilizando a enum na controller:<br>
-        <code>return data.getDate() > DiasDaSemana.DOMINGO && data.getDate() > DiasDaSemana.SABADO;</code>
+        <code>return data.getDate() > DiasDaSemana.DOMINGO && data.getDate() > DiasDaSemana.SABADO;</code><br>
     </p>
 </article>
 
+<h3> 09 Cuidados na declaração de enums </h3>
+<article>
+    <p>   
+        Fixando o valor da enum, deixando de usar o default<br>
+        <code>export enum DiasDaSemana{</code><br>
+        <code>&nbsp;DOMINGO = 0,</code><br>
+        <code>&nbsp;SEGUNDA = 1,</code><br>
+        <code>&nbsp;TERCA = 2,</code><br>
+        <code>&nbsp;QUARTA = 3,</code><br>
+        <code>&nbsp;QUINTA = 4,</code><br>
+        <code>&nbsp;SEXTA = 5,</code><br>
+        <code>&nbsp;SABADO = 6</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
