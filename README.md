@@ -1658,3 +1658,14 @@
     </p>
 </article>
 
+<h3> 11 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;Visibilidade de métodos<br>
+        &nbsp;Validando negociações em dias úteis<br>
+        &nbsp;Vantagens do uso de enums<br>
+        &nbsp;Cuidados com enums<br>
+    </p>
+</article>
+
