@@ -1818,3 +1818,13 @@
     </p>
 </article>
 
+<h3> 08 Revisão </h3>
+<article>
+    <p>   
+       Nesta aula, aprendemos:<br>
+       &nbsp;Revisão da lógica de conversão negociações<br>
+       &nbsp;Método estáticos<br>
+       &nbsp;Parâmetros opcionais <br>
+    </p>
+</article>
+
