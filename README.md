@@ -1808,6 +1808,13 @@
     </p>
 </article>
 
-<b>Correta</b>
+<h3> 07 Sobre parâmetros opcionais </h3>
+<article>
+    <p>   
+        Sobre parâmetros opcionais, marque a única opção que não compila.<br><br>
+        A-)<code>function(a: number, b:number, c?:number): void { }</code><br>
+        B-)<code>function(a: number, b?:number, c?:number): void { }</code><br>
+        C-)<code>function(a?: number, b?:number, c:number): void { }</code> - <b>Correta</b><br>
+    </p>
+</article>
 
-&nbsp;
