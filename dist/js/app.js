@@ -1,7 +1,7 @@
-import { NegociacaoController } from "./controllers/negociacao-controller.js"; //Atentar para colocar o .js no auto complete
+import { NegociacaoController } from "./controllers/negociacao-controller.js";
 const controller = new NegociacaoController();
 const form = document.querySelector('.form');
 form.addEventListener('submit', event => {
-    event.preventDefault(); // Previne o Refresh da página, que seria uma ação default do formulário
+    event.preventDefault();
     controller.adiciona();
 });

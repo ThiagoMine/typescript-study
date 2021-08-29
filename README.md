@@ -1828,3 +1828,14 @@
     </p>
 </article>
 
+<hr>
+
+<h2>Aula 5</h2>
+
+<h3> 02 Removendo comentários do código </h3>
+<article>
+    <p>   
+        Removendo comentários usados nos arquivos ts atravéz da compilação usando o parâmetro: <code>"removeComments": true</code><br>
+    </p>
+</article>
+
