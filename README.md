@@ -1839,3 +1839,24 @@
     </p>
 </article>
 
+<h3> 03 Mudança no tsconfig.json </h3>
+<article>
+    <p>   
+        Ivan tentou remover comentários de seus arquivos ts durante o processo de compilação para JavaScript. No entanto, os comentários ainda continuaram presentes nos arquivos js. Veja como ele configurou o arquivo tsconfig.json:<br>
+        <code>{</code><br>
+        <code>&nbsp;&nbsp;"compilerOptions": {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;"outDir": "dist/js",</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;"target": "ES6",</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;"noEmitOnError": true,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;"noImplicitAny": false,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;"removeComments": false,</code><br>
+        <code>&nbsp;&nbsp;},</code><br>
+        <code>&nbsp;&nbsp;"include": ["app/**/*"]</code><br>
+        <code>}</code><br>
+        Marque a alternativa correta a respeito da configuração realizada por Ivan.<br><br>
+        A-)Por mais que ele tenha adicionado a propriedade removeComments, ele esqueceu de atribuir o valor true. - <b>Correta</b><br>
+        B-)Ele escreveu o nome da propriedade errada, o correto é removeComment e seu valor deve ser true.<br>
+        C-)Ele esqueceu de atribuir true para a propriedade noImplicitAny.<br>
+    </p>
+</article>
+
