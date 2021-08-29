@@ -1907,3 +1907,10 @@
     </p>
 </article>
 
+<h3> 08 Últimos ajustes </h3>
+<article>
+    <p>   
+        Tratando o querySelector do elemento no view.ts<br>
+    </p>
+</article>
+
