@@ -1740,11 +1740,11 @@
         <code>&nbsp;&nbsp;&nbsp;&nbsp;&& data.getDay() < DiasDaSemana.SABADO;</code><br>
         <code>&nbsp;&nbsp;}</code><br>
         <code>}</code><br>
-        A-) - <b>Correta</b><br>
         Vejamos a seu código em ação:<br>
         <code>const dateUtils = new DateUtils();</code><br>
         <code>const ehDiaUtil = dateUtils.ehDiaUtil(new Date());</code><br>
         Marque a opção que transforma corretamente o método ehDiaUtil em um método estático.<br><br>
+        A-) - <b>Correta</b><br>
         <code>class DateUtils {</code><br>
         <code>&nbsp;&nbsp;public static ehDiaUtil(data: Date) {</code><br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;return data.getDay() > DiasDaSemana.DOMINGO</code><br>
