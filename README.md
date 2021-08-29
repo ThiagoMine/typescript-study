@@ -1867,7 +1867,7 @@
     </p>
 </article>
 
-<h3>  05 Sobre o StrictNullChecks </h3>
+<h3> 05 Sobre o StrictNullChecks </h3>
 <article>
     <p>   
         Marque a alternativa correta a respeito do eveito do StrictNullChecks quando ativado.<br><br>
@@ -1887,6 +1887,23 @@
         <code>&nbsp;&nbsp;this.inputValor         = document.querySelector('#valor') as HTMLInputElement;</code><br>
         <code>&nbsp;&nbsp;this.negociacoesView.update(this.negociacoes);</code><br>
         <code>}</code><br>
+    </p>
+</article>
+
+<h3> 07 Tratando null em nosso código </h3>
+<article>
+    <p>   
+        Testando para tratar um possível null em app.ts, o TS entendo o tratamento com ifs<br>
+        <code>const controller = new NegociacaoController();</code>
+        <code>const form = document.querySelector('.form');</code>
+        <code>if (form){</code>
+        <code>&nbsp;&nbsp;form.addEventListener('submit', event => {</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;event.preventDefault(); // Previne o Refresh da página, que seria uma ação default do formulário</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;controller.adiciona();</code>
+        <code>&nbsp;&nbsp;});</code>
+        <code>} else {</code>
+        <code>&nbsp;&nbsp;throw Error("Não foi possível analisar a aplicação. Verifique se o form existe");   </code>
+        <code>}</code>
     </p>
 </article>
 
