@@ -1890,20 +1890,20 @@
     </p>
 </article>
 
-<h3> 07 Tratando null em nosso código </h3>
+<h3> 07 Tratando null em nosso código </h3> 
 <article>
     <p>   
         Testando para tratar um possível null em app.ts, o TS entendo o tratamento com ifs<br>
-        <code>const controller = new NegociacaoController();</code>
-        <code>const form = document.querySelector('.form');</code>
-        <code>if (form){</code>
-        <code>&nbsp;&nbsp;form.addEventListener('submit', event => {</code>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;event.preventDefault(); // Previne o Refresh da página, que seria uma ação default do formulário</code>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;controller.adiciona();</code>
-        <code>&nbsp;&nbsp;});</code>
-        <code>} else {</code>
-        <code>&nbsp;&nbsp;throw Error("Não foi possível analisar a aplicação. Verifique se o form existe");   </code>
-        <code>}</code>
+        <code>const controller = new NegociacaoController();</code><br>
+        <code>const form = document.querySelector('.form');</code><br>
+        <code>if (form){</code><br>
+        <code>&nbsp;&nbsp;form.addEventListener('submit', event => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;event.preventDefault(); // Previne o Refresh da página, que seria uma ação default do formulário</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;controller.adiciona();</code><br>
+        <code>&nbsp;&nbsp;});</code><br>
+        <code>} else {</code><br>
+        <code>&nbsp;&nbsp;throw Error("Não foi possível analisar a aplicação. Verifique se o form existe");   </code><br>
+        <code>}</code><br>
     </p>
 </article>
 
@@ -1914,3 +1914,19 @@
     </p>
 </article>
 
+<h3> 09 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;Remoção de comentários do código compilado<br>
+        &nbsp;Ativação do strictNullChecks<br>
+        &nbsp;Como suprimir erros, quando fizer sentido, resultantes do strictNullChecks<br>
+        &nbsp;Benefícios do strictNullChecks no controle do fluxo da sua aplicação<br>
+    </p>
+</article>
+
+<hr>
+
+# typescript-study-3
+
+<h2>Aula 1</h2>
