@@ -1794,3 +1794,20 @@
     </p>
 </article>
 
+<h3> 06 Parâmetros opcionais </h3>
+<article>
+    <p>   
+        Transformando o parâmetro escapar em um parâmetro opicional, adicionando o "?" após o parâmetro, lembrando que os opicionais devem ser os últimos parâmetros<br>
+        Código do construtor de view.ts:<br>
+        <code>constructor(seletor: string, escapar?: boolean) {</code><br>
+        <code>&nbsp;&nbsp;this.elemento = document.querySelector(seletor);</code><br>
+        <code>&nbsp;&nbsp;if (escapar) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.escapar = escapar;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
