@@ -1877,6 +1877,16 @@
     </p>
 </article>
 
+<h3> 06 Suprimindo a checagem onde faz sentido </h3>
+<article>
+    <p>   
+        Usando o casting explicito 'as' ou <-TIPO-> para forçar o elemento como um tipo específico veja o código do construtor do negociacao-controller:<br>
+        <code>constructor () {</code><br>
+        <code>&nbsp;&nbsp;this.inputData          = <-HTMLInputElement>document.querySelector('#data');</code><br>
+        <code>&nbsp;&nbsp;this.inputQuantidade    = document.querySelector('#quantidade') as HTMLInputElement;</code><br>
+        <code>&nbsp;&nbsp;this.inputValor         = document.querySelector('#valor') as HTMLInputElement;</code><br>
+        <code>&nbsp;&nbsp;this.negociacoesView.update(this.negociacoes);</code><br>
+        <code>}</code><br>
+    </p>
+</article>
 
-
-&nbsp;
