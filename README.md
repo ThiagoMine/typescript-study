@@ -1768,3 +1768,29 @@
     </p>
 </article>
 
+<h3> 05 Protegendo nosso template </h3>
+<article>
+    <p>   
+        Protegendo o template de inserções de scripts, utilizando uma expressão regular<br>
+        Código da view.ts:<br>
+        <code>export abstract class View<T>{</code><br>
+        <code>&nbsp;&nbsp;protected elemento: HTMLElement;</code><br>
+        <code>&nbsp;&nbsp;private escapar = false;</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;constructor(seletor: string, escapar: boolean) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.elemento = document.querySelector(seletor);</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;public update(model: T): void {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;let template = this.template(model);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;if (this.escapar) { </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;template = template.replace(/<script>[\s\S]*?<\/script>/, '');</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.elemento.innerHTML = template;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;protected abstract template(model: T):string;</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
