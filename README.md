@@ -1704,3 +1704,28 @@
         </p>
 </article>
 
+<h3> 03 Métodos estáticos </h3>
+<article>
+    <p>   
+        Transformando o métoido criaDe em um método estático pois esse tipo de método pertence a classe mas não necessita de uma instancia da mesma para ser utilizado:<br>
+        Model negociacao.ts:<br>
+        &nbsp;&nbsp;de:<br>
+        <code>public criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {</code><br>
+        &nbsp;&nbsp;para:<br>
+        <code>public static criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {</code><br><br>
+        Controller negociacao-controller.ts:<br>
+        &nbsp;&nbsp;de:<br>
+        <code>const negociacaoTemp = new Negociacao(null, 0, 0);</code><br>
+        <code>const negociacao = negociacaoTemp.criaDe(</code>
+        <code>&nbsp;this.inputData.value,</code>
+        <code>&nbsp;this.inputQuantidade.value,</code>
+        <code>&nbsp;this.inputValor.value</code>
+        <code>);</code><br>
+        &nbsp;&nbsp;para:<br>
+        <code>const negociacao = Negociacao.criaDe(</code><br>
+        <code>&nbsp;this.inputData.value,</code><br>
+        <code>&nbsp;this.inputQuantidade.value,</code><br>
+        <code>&nbsp;this.inputValor.value</code><br>
+        <code>); </code><br>
+    </p>
+</article>
