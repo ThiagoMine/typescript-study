@@ -1860,3 +1860,10 @@
     </p>
 </article>
 
+<h3> 04 StrictNullChecks </h3>
+<article>
+    <p>   
+        Setando a propriedade <code>"strictNullChecks": true</code>, essa propriedade nos obriga a tratar os elementos que podem receber nulos e isso causou uma série de erros no código.<br>
+    </p>
+</article>
+
