@@ -1867,3 +1867,16 @@
     </p>
 </article>
 
+<h3>  05 Sobre o StrictNullChecks </h3>
+<article>
+    <p>   
+        Marque a alternativa correta a respeito do eveito do StrictNullChecks quando ativado.<br><br>
+        A-)Diz para o compilador TSC que pare de assumir implicitamente o tipo null para todos os tipos da aplicação. Caso null faça sentido, o desenvolvedor deve deixar isso explícito em seu código. Inclusive o StrictNullChecks obrigará o desenvolvedor a tratar todos os pontos de acesso a valores null em sua aplicação, forçando que o desenvolvedor pondere com cuidado cada cenário. - <b>Correta</b><br>
+        B-)Faz com que compilador TSC aceite o valor null implicitamente para todos os tipos da aplicação.<br>
+        C-)Diz para o compilador TSC que pare de assumir implicitamente o tipo null para todos os tipos da aplicação. Caso null faça sentido, o desenvolvedor deve deixar isso explícito em seu código. Apesar das checagem, o desenvolvedor não é obrigado a tratar todos os pontos de acesso a valores null em sua aplicação.<br>
+    </p>
+</article>
+
+
+
+&nbsp;
