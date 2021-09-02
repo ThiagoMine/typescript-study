@@ -20,9 +20,7 @@ export class NegociacaoController {
     }
 
     public adiciona(): void {
-        /*
-            Zé, você já viu isso?
-        */
+        const t1 = performance.now();
         const negociacao = Negociacao.criaDe(
             this.inputData.value, 
             this.inputQuantidade.value,
@@ -38,6 +36,8 @@ export class NegociacaoController {
         this.negociacoes.adiciona(negociacao);
         this.limparFormulario();
         this.atualizaView();
+        const t2 = performance.now()
+        console.log(`Tempo de execução da negociacao-controller: ${(t2-t1)/1000}`)
     }
 
     private ehDiaUtil(data: Date) {

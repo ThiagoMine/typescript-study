@@ -1931,9 +1931,21 @@
 
 <h2>Aula 1</h2>
 
-<h3>  01 Apresentação </h3>
+<h3> 01 Apresentação </h3>
 <article>
     <p>   
         Reorganização de pastas<br>
     </p>
 </article>
+
+<h3> 02 Requisitos não funcionais </h3>
+<article>
+    <p>   
+        Adicionando métodos que iram medir a performance do código.<br>
+        No inicio do método: <code>const t1 = performance.now();</code><br>
+        No final do método:<br>
+        <code>const t2 = performance.now();</code><br>
+        <code>console.log(`Tempo de execução da view: ${(t2-t1)/1000}`)</code><br>
+    </p>
+</article>
+
