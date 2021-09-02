@@ -1967,15 +1967,15 @@
 <article>
     <p>   
         Criando a assinatura básica do decorator:<br>
-        <code>export function logarTempoDeExecucao() {</code>
-        <code>&nbsp;&nbsp;return function(</code>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;target: any,</code>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;propertyKey: string,</code>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;descriptor: PropertyDescriptor</code>
-        <code>&nbsp;&nbsp;) {</code>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code>
-        <code>&nbsp;&nbsp;}</code>
-        <code>}</code>
+        <code>export function logarTempoDeExecucao() {</code><br>
+        <code>&nbsp;&nbsp;return function(</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;target: any,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;propertyKey: string,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;descriptor: PropertyDescriptor</code><br>
+        <code>&nbsp;&nbsp;) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
     </p>
 </article>
 
