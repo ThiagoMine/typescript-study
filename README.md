@@ -1949,3 +1949,17 @@
     </p>
 </article>
 
+<h3> 03 TypeScript e Decorators </h3>
+<article>
+    <p>   
+        1 Habilitando decorators no tsconfig.json: <code>"experimentalDecorators": true</code><br><br>
+        2 Criando pasta decorators e o decorator logar-tempo-de-execucao.ts:<br>
+        <code>export function logarTempoDeExecucao() {</code><br>
+        <code>    </code><br>
+        <code>}</code><br><br>
+        3 Implementando decorator no método adiciona():
+        <code>@logarTempoDeExecucao()</code>
+        <code>public adiciona(): void {</code>
+    </p>
+</article>
+
