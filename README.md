@@ -2004,3 +2004,13 @@
     </p>
 </article>
 
+<h3> 06 TypeScript e Decorators </h3>
+<article>
+    <p>   
+        Marque todas as afirmativas verdadeiras sobre TypeScript e Decorators. Selecione 2 alternativas:<br>
+        A-)É utilizando como @NomeDoDecorator(). - <b>Correta</b><br>
+        B-)É ativado por padrão na linguagem TypeScript.<br>
+        C-)É um recurso experimental. - <b>Correta</b><br>
+    </p>
+</article>
+
