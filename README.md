@@ -1963,3 +1963,19 @@
     </p>
 </article>
 
+<h3> 04 API do Decorator </h3>
+<article>
+    <p>   
+        Criando a assinatura básica do decorator:<br>
+        <code>export function logarTempoDeExecucao() {</code>
+        <code>&nbsp;&nbsp;return function(</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;target: any,</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;propertyKey: string,</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;descriptor: PropertyDescriptor</code>
+        <code>&nbsp;&nbsp;) {</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code>
+        <code>&nbsp;&nbsp;}</code>
+        <code>}</code>
+    </p>
+</article>
+
