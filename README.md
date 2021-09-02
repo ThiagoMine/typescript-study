@@ -2014,3 +2014,14 @@
     </p>
 </article>
 
+<h3> 07 Sobre o descriptor </h3>
+<article>
+    <p>   
+        Quando criamos um decorator, um dos parâmetros mais importantes é o descriptor.<br>
+        Marque a alternativa verdadeira sobre o papel do descriptor:<br><br>
+        A-) Nos dá acesso a implementação do método decorado através de descritor.value. - <b>Correta</b><br>
+        B-) É o método decorado.<br>
+        C-) Não podemos sobrescrever o valor de descriptor.value, definindo uma nova implementação para o método.<br>
+    </p>
+</article>
+
