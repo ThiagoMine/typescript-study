@@ -2258,3 +2258,15 @@
     </p>
 </article>
 
+<h3> 08 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;&nbsp;Decorator com parâmetro<br>
+        &nbsp;&nbsp;Criação de um decorator de inspeção<br>
+        &nbsp;&nbsp;Ordem de execução dos decorators<br>
+        &nbsp;&nbsp;Simplicação no design de decorators<br>
+        &nbsp;&nbsp;Portabilidade de funcionalidade antiga para decorators<br>
+    </p>
+</article>
+
