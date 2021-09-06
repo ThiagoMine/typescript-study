@@ -2068,3 +2068,13 @@
     </p>
 </article>
 
+<h3> 10 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;&nbsp;Introdução e estrutura do projeto<br>
+        &nbsp;&nbsp;Requisitos não funcionais<br>
+        &nbsp;&nbsp;Decorator de método<br>
+        &nbsp;&nbsp;Logar tempo de execução com decorator<br>
+    </p>
+</article>
