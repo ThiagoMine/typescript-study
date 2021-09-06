@@ -2,7 +2,7 @@
 
 <h2>Aula 1</h2>
 
-<h3> 06 - Importação de módulo nativo do ECMAScript </h3>
+<h3> 01 Importação de módulo nativo do ECMAScript </h3>
 <article>
     <p>   
         Qual das alternativas abaixo importa corretamente um módulo nativo do EcmaScript? <br>
@@ -13,7 +13,7 @@
     </p>
 </article>
 
-<h3> 08 - Módulo e seu escopo </h3>
+<h3> 02 Módulo e seu escopo </h3>
 <article>
     <p>   
         Qual das alternativas abaixo é verdadeira sobre o scopo de um módulo?<br>
@@ -24,7 +24,7 @@
     </p>
 </article>
 
-<h3> 09 ES2015 e classes </h3>
+<h3> 03 ES2015 e classes </h3>
 <article>
     <p>   
         No paradigma da orientação a objetos criamos a representação de algo do mundo real em nosso programa através de modelos e esses modelos são definidos através de classes.<br>
@@ -48,7 +48,7 @@
     </p>
 </article>
 
-<h3> Revisão </h3>
+<h3> 04 Revisão </h3>
 <article>
     <p>   
         Nesta aula, aprendemos:<br>
@@ -63,7 +63,7 @@
 
 <h2>Aula 2</h2>
 
-<h3> 03 Sobre o compilador do TypeScript </h3>
+<h3> 01 Sobre o compilador do TypeScript </h3>
 <article>
     <p>   
         Temos as seguintes afirmações a respeito do compilador do TypeScript:<br>
@@ -78,7 +78,7 @@
     </p>
 </article>
 
-<h3> 05 Configuração básica do compilador </h3>
+<h3> 02 Configuração básica do compilador </h3>
 <article>
     <p>   
         Nome do arquivo: tsconfig.json - na raiz do projeto<br>
@@ -96,7 +96,7 @@
     </p>
 </article>
 
-<h3> 06 O arquivo tsconfig.json </h3>
+<h3> 03 O arquivo tsconfig.json </h3>
 <article>
     <p>   
         Temos a seguinte declaração do arquivo tsconfig.json:<br>
@@ -116,7 +116,7 @@
     </p>
 </article>
 
-<h3> 07 Aprimorando a configuração </h3>
+<h3> 04 Aprimorando a configuração </h3>
 <article>
     <p>   
         <code>{</code><br>
@@ -132,7 +132,7 @@
     </p>
 </article>
 
-<h3> 08 Automatizando a compilação de arquivos </h3>
+<h3> 05 Automatizando a compilação de arquivos </h3>
 <article>
     <p>   
         No package.json criar o script: <code>"watch": "tsc -w"</code>
@@ -142,14 +142,14 @@
     </p>
 </article>
 
-<h3> 09 O modificador private </h3>
+<h3> 06 O modificador private </h3>
 <article>
     <p>   
         Substituir # pelo _ adicionando o private<br>
     </p>
 </article>
 
-<h3> 10 TypeScript e classes </h3>
+<h3> 07 TypeScript e classes </h3>
 <article>
     <p>   
         O TypeScript é um superset da ES2015, ou seja, além de suportar os recurso da linguagem desta versão, adiciona outros. Um exemplo é o suporte ao modificador private.<br>
@@ -197,7 +197,7 @@
     </p>
 </article>
 
-<h3> 11 Revisão </h3>
+<h3> 08 Revisão </h3>
 <article>
     <p>   
         Nesta aula, aprendemos:
@@ -213,7 +213,7 @@
 
 <h2>Aula 3</h2>
 
-<h3> 02 O controller de negociação </h3>
+<h3> 01 O controller de negociação </h3>
 <article>
     <p>   
         Criação do controler que lerá o formulário e criará o modelo, segue código gerado:<br>
@@ -237,7 +237,7 @@
     </p>
 </article>
 
-<h3> 03 Integração com o formulário </h3>
+<h3> 02 Integração com o formulário </h3>
 <article>
     <p>   
         Realizando a integração com o formulário no app.ts, segue código gerado:<br>
@@ -252,7 +252,7 @@
     </p>
 </article>
 
-<h3> 04 Surpresa ao instanciar uma negociação </h3>
+<h3> 03 Surpresa ao instanciar uma negociação </h3>
 <article>
     <p>   
         Iniciando a captura de valores no Form, Alterações de código no controller:<br>
@@ -282,7 +282,7 @@
     </p>
 </article>
 
-<h3> 05 O tipo implícito any </h3>
+<h3> 04 O tipo implícito any </h3>
 <article>
     <p>   
         Ativando a tipagem no compilador, ou seja, obrigando a utilização de tipagens, alteração de código:<br>
@@ -318,7 +318,7 @@
     </p>
 </article>
 
-<h3> 06 Sobre o tipo any </h3>
+<h3> 05 Sobre o tipo any </h3>
 <article>
     <p>   
         Marque apenas as opções verdadeiras sobre o tipo any. Selecione 2 alternativas<br>
@@ -329,7 +329,7 @@
     </p>
 </article>
 
-<h3> 07 Ajustando nosso controller </h3>
+<h3> 06 Ajustando nosso controller </h3>
 <article>
     <p>   
         Inciando fix do controller, arrumando o tipo HTMLInputElement<br>
@@ -359,7 +359,7 @@
     </p>
 </article>
 
-<h3> 08 Sobre o código </h3>
+<h3> 07 Sobre o código </h3>
 <article>
     <p>   
         Marina configurou seu arquivo tsconfig.json da seguinte maneira:<br>
@@ -397,7 +397,7 @@
     </p>
 </article>
 
-<h3> 09 Convertendo dados de entrada </h3>
+<h3> 08 Convertendo dados de entrada </h3>
 <article>
     <p>   
         Finalizando fix do controller, arrumando os tipos da negociação, segue código<br>
@@ -427,7 +427,7 @@
     </p>
 </article>
 
-<h3> 10 Conversão de data </h3>
+<h3> 09 Conversão de data </h3>
 <article>
     <p>   
         Marque a opção correta que cria um objeto Date a partir de uma string: Selecione uma alternativa<br>
@@ -437,7 +437,7 @@
     </p>
 </article>
 
-<h3> 11 Organizando melhor nosso código </h3>
+<h3> 10 Organizando melhor nosso código </h3>
 <article>
     <p>   
         Melhorando o código e tipando os métodos do controller e do model<br>
@@ -499,7 +499,7 @@
     </p>
 </article>
 
-<h3> 12 Limpando o formulário </h3>
+<h3> 11 Limpando o formulário </h3>
 <article>
     <p>   
         Limpando formulário e colocando focus no data, segue método criado no controller:<br>
@@ -515,7 +515,7 @@
     </p>
 </article>
 
-<h3> 13 Revisão </h3>
+<h3> 12 Revisão </h3>
 <article>
     <p>   
         Nesta aula, aprendemos:<br>
@@ -531,7 +531,7 @@
 
 <h2>Aula 4</h2>
 
-<h3> 02 Modelo de uma lista de negociações </h3>
+<h3> 01 Modelo de uma lista de negociações </h3>
 <article>
     <p>   
         Iniciando a criação do modelo negociações:<br>
@@ -541,7 +541,7 @@
     </p>
 </article>
 
-<h3> 03 Primeiro contato com Generics </h3>
+<h3> 02 Primeiro contato com Generics </h3>
 <article>
     <p>   
         Criando uma lista tipo Array de Negociação na classe Negociações:<br>
@@ -553,7 +553,7 @@
     </p>
 </article>
 
-<h3>  04 Sobre Array </h3>
+<h3> 03 Sobre Array </h3>
 <article>
     <p>   
         Marque apenas as opções que declaram um array corretamente em TypeScript, assumindo que a configuração noImplicitAny está definida com o valor true. Selecione 2 alternativas<br>
@@ -563,7 +563,7 @@
     </p>
 </article>
 
-<h3> 05 Avançando com nosso modelo </h3>
+<h3> 04 Avançando com nosso modelo </h3>
 <article>
     <p>   
         Criando métodos adiciona e lista na model negociações:<br>
@@ -577,7 +577,7 @@
     </p>
 </article>
 
-<h3> 06 Um problema não esperado </h3>
+<h3> 05 Um problema não esperado </h3>
 <article>
     <p>   
         Adicionando os métodos criados em negociações ao controller:<br>
@@ -622,7 +622,7 @@
     </p>
 </article>
 
-<h3> 07 Evitando a mutabilidade da lista </h3>
+<h3> 06 Evitando a mutabilidade da lista </h3>
 <article>
     <p>   
         No formato anterior era possível alterar a lista de negociações pelo método lista, usa-se a princípio o spread operator para solucionar o problema, segue método lista() alterado:<br>
@@ -632,7 +632,7 @@
     </p>
 </article>
 
-<h3> 08 O modificador readonly </h3>
+<h3> 07 O modificador readonly </h3>
 <article>
     <p>   
         A fim de melhorar a semantica do código usamos o tipo ReadonlyArray, e não a tecnica de spread.<br>
@@ -642,7 +642,7 @@
     </p>
 </article>
 
-<h3> 09 Somente leitura </h3>
+<h3> 08 Somente leitura </h3>
 <article>
     <p>   
         Marque a opção que declara um array e que não disponibilize a remoção ou inclusão de novos items. Selecione uma alternativa<br>
@@ -652,7 +652,7 @@
     </p>
 </article>
 
-<h3> 10 Revisão </h3>
+<h3> 09 Revisão </h3>
 <article>
     <p>   
         Nesta aula, aprendemos:<br>
@@ -669,7 +669,7 @@
 
 <h2>Aula 5</h2>
 
-<h3> 02 Declaração no próprio construtor </h3>
+<h3> 01 Declaração no próprio construtor </h3>
 <article>
     <p>   
         Criando atributos direto no construtor: <br>
@@ -681,7 +681,7 @@
     </p>
 </article>
 
-<h3> 03 Construtor e atalho </h3>
+<h3> 02 Construtor e atalho </h3>
 <article>
     <p>   
         Temos a seguinte declaração de classe:<br>
@@ -730,7 +730,7 @@
     </p>
 </article>
 
-<h3> 04 Arrays e Generics </h3>
+<h3> 03 Arrays e Generics </h3>
 <article>
     <p>   
         Simplificando declarações de tipo array<br>
@@ -739,7 +739,7 @@
     </p>
 </article>
 
-<h3> 05 Mais sobre readonly </h3>
+<h3> 04 Mais sobre readonly </h3>
 <article>
     <p>   
         No model negociacao ao invés de usar os atributos como private, podemos usá-los como public porém usamos o readonly no construtor pos assim uma vez atribuido o valor neste construtor não é mais permitido altera-lo, o código era assim:<br>
@@ -782,7 +782,7 @@
     </p>
 </article>
 
-<h3> 06 Um pouco mais sobre readonly </h3>
+<h3> 05 Um pouco mais sobre readonly </h3>
 <article>
     <p>   
         Temos o seguinte código:<br>
@@ -821,14 +821,14 @@
     </p>
 </article>
 
-<h3> 07 Mais surpresas em nossa modelagem </h3>
+<h3> 06 Mais surpresas em nossa modelagem </h3>
 <article>
     <p>   
         Mesmo no readonly a data pode ser alterada pois é um objeto que possui métodos que permitem a manipulação do valor.<br>
     </p>
 </article>
 
-<h3> 08 Programação defensiva </h3>
+<h3> 07 Programação defensiva </h3>
 <article>
     <p>   
         Fazemos programação defensica para solucionar o problema anterior, segue código:<br>
@@ -851,7 +851,7 @@
     </p>
 </article>
 
-<h3> 09 Revisão </h3>
+<h3> 08 Revisão </h3>
 <article>
     <p>   
         Nesta aula, aprendemos:<br>
@@ -869,14 +869,14 @@
 
 <h2>Aula 1</h2>
 
-<h3> 03 Modelo para o usuário </h3>
+<h3> 01 Modelo para o usuário </h3>
 <article>
     <p>   
         Apresentando o modelo de view que iremos usar. <br>
     </p>
 </article>
 
-<h3> 04 Criando nossa primeira view </h3>
+<h3> 02 Criando nossa primeira view </h3>
 <article>
     <p>   
         Iniciando o código da view:<br>
@@ -888,7 +888,7 @@
     </p>
 </article>
 
-<h3> 05 Integrando nossa view à página </h3>
+<h3> 03 Integrando nossa view à página </h3>
 <article>
     <p>   
         Fazendo o render do template no HTML<br>
@@ -916,7 +916,7 @@
     </p>
 </article>
 
-<h3> 06 Criando elementos do DOM dinamicamente </h3>
+<h3> 04 Criando elementos do DOM dinamicamente </h3>
 <article>
     <p>   
         Utilizando a API do DOM, podemos criar elementos dinamicamente através de document.createElement ou:<br>
@@ -926,14 +926,14 @@
     </p>
 </article>
 
-<h3> 07 Revisando nossos passos </h3>
+<h3> 05 Revisando nossos passos </h3>
 <article>
     <p>   
         Revisão dos passos 3 ao 6<br>
     </p>
 </article>
 
-<h3> 08 Unindo view e modelo </h3>
+<h3> 06 Unindo view e modelo </h3>
 <article>
     <p>   
         1 - Controller manda para o método update do view o modelo Negociacoes<br>
@@ -1025,7 +1025,7 @@
     </p>
 </article>
 
-<h3> 09 A arte do template string </h3>
+<h3> 07 A arte do template string </h3>
 <article>
     <p>   
         Guga escreveu o seguinte código:<br>
@@ -1069,7 +1069,7 @@
     </p>
 </article>
 
-<h3> 10 Formatando a data </h3>
+<h3> 08 Formatando a data </h3>
 <article>
     <p>   
         1 - Usando a classe Intl para formatar a data<br><br>
@@ -1079,7 +1079,7 @@
     </p>
 </article>
 
-<h3> 11 - Revisão </h3>
+<h3> 09 Revisão </h3>
 <article>
     <p>   
         Nesta aula, aprendemos:<br>
@@ -1094,7 +1094,7 @@
 
 <h2>Aula 2</h2>
 
-<h3> 02 Mensagem view </h3>
+<h3> 01 Mensagem view </h3>
 <article>
     <p>   
         1 - Cria view da mensagem:<br>
@@ -1128,14 +1128,14 @@
     </p>
 </article>
 
-<h3> 03 Repetição de código </h3>
+<h3> 02 Repetição de código </h3>
 <article>
     <p>   
         Identifica a repetição de Código nas views<br>
     </p>
 </article>
 
-<h3> 04 Herança e pequena surpresa </h3>
+<h3> 03 Herança e pequena surpresa </h3>
 <article>
     <p>   
         1 - Criar view.ts contendo o atributo elemento e o contrutor:<br>
@@ -1153,7 +1153,7 @@
     </p>
 </article>
 
-<h3> 05 Utilizando Herança </h3>
+<h3> 04 Utilizando Herança </h3>
 <article>
     <p>   
         Mônica decidiu criar um jogo em JavaScript, mas optou por <br>utilizar TypeScript devido aos recursos extras da linguagem. Ela <br>criou três classes:<br>
@@ -1210,7 +1210,7 @@
     </p>
 </article>
 
-<h3> 06 Modificador de acesso </h3>
+<h3> 05 Modificador de acesso </h3>
 <article>
     <p>   
         Temos o seguinte código:<br>
@@ -1232,7 +1232,7 @@
     </p>
 </article>
 
-<h3> 07 Mais surpresas com Herança </h3>
+<h3> 06 Mais surpresas com Herança </h3>
 <article>
     <p>   
         1 - Reutilizando o método upate em view na classe pai: <br>
@@ -1256,7 +1256,7 @@
     </p>
 </article>
 
-<h3> 08 Avançando no uso de Generics </h3>
+<h3> 07 Avançando no uso de Generics </h3>
 <article>
     <p>   
         1 - Transformando o parametro model em generics usando o tipo genérico &lt;T&gt; que é definido no extend:<br>
@@ -1283,7 +1283,7 @@
     </p>
 </article>
 
-<h3> 09 Dois tipos genéricos </h3>
+<h3> 08 Dois tipos genéricos </h3>
 <article>
     <p>   
         Fernando utiliza muito o IndexedDB, um banco de dados que vive no próprio navegador. Com forte influência de padrões de projeto, decidiu criar um GenericDAO:<br>
@@ -1393,7 +1393,7 @@
     </p>
 </article>
 
-<h3> 10 Classe abstrata </h3>
+<h3> 09 Classe abstrata </h3>
 <article>
     <p>   
         1 - Transformando view em uma classe abstrata para que a mesma não possa ser instânciada:<br>
@@ -1403,7 +1403,7 @@
     </p>
 </article>
 
-<h3> 11 Utilizando Herança </h3>
+<h3> 10 Utilizando Herança </h3>
 <article>
     <p>   
         Eduardo tem que lidar com a geração de boleto bancário para diversos bancos. Contudo, apesar dos boletos serem muito parecidos, cada banco possui um cabeçalho diferente.<br>
@@ -1441,7 +1441,7 @@
     </p>
 </article>
 
-<h3> 12 Classe abstrata </h3>
+<h3> 11 Classe abstrata </h3>
 <article>
     <p>   
         Fernanda, assim como Eduardo do exercío anterior, tem que lidar com a geração de boleto bancário para diversos bancos. Porém ela adotou uma abordagem diferente:<br>
@@ -1476,7 +1476,7 @@
     </p>
 </article>
 
-<h3> 13 Revisão </h3>
+<h3> 12 Revisão </h3>
 <article>
     <p>   
         Nesta aula, aprendemos:<br>
@@ -1491,7 +1491,7 @@
 
 <h2>Aula 3</h2>
 
-<h3> 02 Visibilidade do método template </h3>
+<h3> 01 Visibilidade do método template </h3>
 <article>
     <p>   
         1 - Restringindo o uso do método template para somente a classe pai e as classes filhas: <br>
@@ -1501,7 +1501,7 @@
     </p>
 </article>
 
-<h3> 03 Métodos privados </h3>
+<h3> 02 Métodos privados </h3>
 <article>
     <p>   
         1 - Criando método privado para a formatação de data na view negociacao:<br>
@@ -1541,7 +1541,7 @@
     </p>
 </article>
 
-<h3> 04 Centralizando updates em um único lugar </h3>
+<h3> 03 Centralizando updates em um único lugar </h3>
 <article>
     <p>   
         Cria método privado que agrupa as atualizações de view na controller:<br>
@@ -1552,7 +1552,7 @@
     </p>
 </article>
 
-<h3> 05 Aceitando apenas dias úteis </h3>
+<h3> 04 Aceitando apenas dias úteis </h3>
 <article>
     <p>   
         Fazendo validações para dias uteis no método adiciona da controller (em JS):<br>
@@ -1569,7 +1569,7 @@
     </p>
 </article>
 
-<h3> 06 Sobre o objeto Date </h3>
+<h3> 05 Sobre o objeto Date </h3>
 <article>
     <p>   
         <code>Temos a seguinte instância de date:</code><br>
@@ -1581,7 +1581,7 @@
     </p>
 </article>
 
-<h3> 07  Organizando melhor nosso código </h3>
+<h3> 06  Organizando melhor nosso código </h3>
 <article>
     <p>   
         1 - Melhorando código de validação do dia útil:<br>
@@ -1606,7 +1606,7 @@
     </p>
 </article>
 
-<h3> 08 Enumerations </h3>
+<h3> 07 Enumerations </h3>
 <article>
     <p>   
         1 - Criar enum dias da semana (Enuns começam com 0):<br>
@@ -1624,7 +1624,7 @@
     </p>
 </article>
 
-<h3> 09 Cuidados na declaração de enums </h3>
+<h3> 08 Cuidados na declaração de enums </h3>
 <article>
     <p>   
         Fixando o valor da enum, deixando de usar o default<br>
@@ -1640,7 +1640,7 @@
     </p>
 </article>
 
-<h3> 10 Sobre o valor da enum </h3>
+<h3> 09 Sobre o valor da enum </h3>
 <article>
     <p>   
         Temos a seguinte enum:<br>
@@ -1658,7 +1658,7 @@
     </p>
 </article>
 
-<h3> 11 Revisão </h3>
+<h3> 10 Revisão </h3>
 <article>
     <p>   
         Nesta aula, aprendemos:<br>
@@ -1673,7 +1673,7 @@
 
 <h2>Aula 4</h2>
 
-<h3> 02 Isolando a lógica de conversão de entrada </h3>
+<h3> 01 Isolando a lógica de conversão de entrada </h3>
 <article>
     <p>   
         Transferindo a lógica de conversão de valores para a model negociação:<br>
@@ -1704,7 +1704,7 @@
         </p>
 </article>
 
-<h3> 03 Métodos estáticos </h3>
+<h3> 02 Métodos estáticos </h3>
 <article>
     <p>   
         Transformando o métoido criaDe em um método estático pois esse tipo de método pertence a classe mas não necessita de uma instancia da mesma para ser utilizado:<br>
@@ -1730,7 +1730,7 @@
     </p>
 </article>
 
-<h3> 04 Sobre métodos estáticos </h3>
+<h3> 03 Sobre métodos estáticos </h3>
 <article>
     <p>   
         Emma decidiu criar uma classe responsável por conter todas as operações auxiliares que operam sobre data:<br>
@@ -1768,7 +1768,7 @@
     </p>
 </article>
 
-<h3> 05 Protegendo nosso template </h3>
+<h3> 04 Protegendo nosso template </h3>
 <article>
     <p>   
         Protegendo o template de inserções de scripts, utilizando uma expressão regular<br>
@@ -1794,7 +1794,7 @@
     </p>
 </article>
 
-<h3> 06 Parâmetros opcionais </h3>
+<h3> 05 Parâmetros opcionais </h3>
 <article>
     <p>   
         Transformando o parâmetro escapar em um parâmetro opicional, adicionando o "?" após o parâmetro, lembrando que os opicionais devem ser os últimos parâmetros<br>
@@ -1808,7 +1808,7 @@
     </p>
 </article>
 
-<h3> 07 Sobre parâmetros opcionais </h3>
+<h3> 06 Sobre parâmetros opcionais </h3>
 <article>
     <p>   
         Sobre parâmetros opcionais, marque a única opção que não compila.<br><br>
@@ -1818,7 +1818,7 @@
     </p>
 </article>
 
-<h3> 08 Revisão </h3>
+<h3> 07 Revisão </h3>
 <article>
     <p>   
        Nesta aula, aprendemos:<br>
@@ -1832,14 +1832,14 @@
 
 <h2>Aula 5</h2>
 
-<h3> 02 Removendo comentários do código </h3>
+<h3> 01 Removendo comentários do código </h3>
 <article>
     <p>   
         Removendo comentários usados nos arquivos ts atravéz da compilação usando o parâmetro: <code>"removeComments": true</code><br>
     </p>
 </article>
 
-<h3> 03 Mudança no tsconfig.json </h3>
+<h3> 02 Mudança no tsconfig.json </h3>
 <article>
     <p>   
         Ivan tentou remover comentários de seus arquivos ts durante o processo de compilação para JavaScript. No entanto, os comentários ainda continuaram presentes nos arquivos js. Veja como ele configurou o arquivo tsconfig.json:<br>
@@ -1860,14 +1860,14 @@
     </p>
 </article>
 
-<h3> 04 StrictNullChecks </h3>
+<h3> 03 StrictNullChecks </h3>
 <article>
     <p>   
         Setando a propriedade <code>"strictNullChecks": true</code>, essa propriedade nos obriga a tratar os elementos que podem receber nulos e isso causou uma série de erros no código.<br>
     </p>
 </article>
 
-<h3> 05 Sobre o StrictNullChecks </h3>
+<h3> 04 Sobre o StrictNullChecks </h3>
 <article>
     <p>   
         Marque a alternativa correta a respeito do eveito do StrictNullChecks quando ativado.<br><br>
@@ -1877,7 +1877,7 @@
     </p>
 </article>
 
-<h3> 06 Suprimindo a checagem onde faz sentido </h3>
+<h3> 05 Suprimindo a checagem onde faz sentido </h3>
 <article>
     <p>   
         Usando o casting explicito 'as' ou <-TIPO-> para forçar o elemento como um tipo específico veja o código do construtor do negociacao-controller:<br>
@@ -1890,7 +1890,7 @@
     </p>
 </article>
 
-<h3> 07 Tratando null em nosso código </h3> 
+<h3> 06 Tratando null em nosso código </h3> 
 <article>
     <p>   
         Testando para tratar um possível null em app.ts, o TS entendo o tratamento com ifs<br>
@@ -1907,14 +1907,14 @@
     </p>
 </article>
 
-<h3> 08 Últimos ajustes </h3>
+<h3> 07 Últimos ajustes </h3>
 <article>
     <p>   
         Tratando o querySelector do elemento no view.ts<br>
     </p>
 </article>
 
-<h3> 09 Revisão </h3>
+<h3> 08 Revisão </h3>
 <article>
     <p>   
         Nesta aula, aprendemos:<br>
@@ -2078,3 +2078,46 @@
         &nbsp;&nbsp;Logar tempo de execução com decorator<br>
     </p>
 </article>
+
+<hr>
+
+<h2>Aula 2</h2>
+
+<h3> 01 Decorator com parâmetro </h3>
+<article>
+    <p>   
+        Adicionando um atributo para definir a unidade de tempo do decorator<br>
+        Decorator: <br>
+        <code>export function logarTempoDeExecucao(emSegundos: boolean = false) {</code><br>
+        <code>&nbsp;&nbsp;retu'rn function(</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;target: any,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;propertyKey: string,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;descriptor: PropertyDescriptor</code><br>
+        <code>&nbsp;&nbsp;) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;descriptor.value = function(...args: any[]) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let divisor = 1;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let unidade = "milisegundos";</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (emSegundos) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divisor = 1000;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unidade = "segundos";</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const t1 = performance.now();</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const retorno = metodoOriginal.apply(this, args);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const t2 = performance.now();</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(`${propertyKey}, tempo de execução: ${(t2-t1)/divisor} ${unidade}`)</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retorno;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br><br><br>
+        Chamada do decorator passando um atributo:<br>
+        <code>@logarTempoDeExecucao(true)</code><br>
+        <code>public update(model: T): void {</code><br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
