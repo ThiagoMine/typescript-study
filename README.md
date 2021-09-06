@@ -2230,3 +2230,31 @@
     </p>
 </article>
 
+<h3> 07 Escapando texto através de Decorator </h3>
+<article>
+    <p>   
+        Transferindo a lógica de escapar a tag &lt;script&gt; para um decorator.<br>
+        Decorator escape.ts:<br>
+        <code>export function escape(</code><br>
+        <code>&nbsp;&nbsp;target: any,</code><br>
+        <code>&nbsp;&nbsp;propertyKey: string,</code><br>
+        <code>&nbsp;&nbsp;descriptor: PropertyDescriptor</code><br>
+        <code>) {</code><br>
+        <code>&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;descriptor.value = function (...args: any[]) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;let retorno = metodoOriginal.apply(this, args);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;if (typeof retorno === 'string'){</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(`@escape em ação na classe </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${this.constructor.name} para o método </code>$<code>{propertyKey}`);$</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retorno = retorno</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.replace(/&lt;script&gt;[\s\S]*?&lt;\/script&gt;/, '');</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return retorno;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;return descriptor;</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
