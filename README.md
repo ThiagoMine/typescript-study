@@ -2061,3 +2061,10 @@
     </p>
 </article>
 
+<h3> 09 Curiosidade a respeito do Decorator </h3>
+<article>
+    <p>   
+        Apenas mostrando o código JS Gerado<br>
+    </p>
+</article>
+
