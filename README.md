@@ -1955,7 +1955,7 @@
         1 Habilitando decorators no tsconfig.json: <code>"experimentalDecorators": true</code><br><br>
         2 Criando pasta decorators e o decorator logar-tempo-de-execucao.ts:<br>
         <code>export function logarTempoDeExecucao() {</code><br>
-        <code>    </code><br>
+        <code>&nbsp;&nbsp;</code><br>
         <code>}</code><br><br>
         3 Implementando decorator no método adiciona():
         <code>@logarTempoDeExecucao()</code>
@@ -2118,6 +2118,38 @@
     </p>
 </article>
 
-<b>Correta</b>
+<h3> 02 Esboço de um Decorator de método </h3>
+<article>
+    <p>   
+        Rafaela deseja criar um decorator que, ao ser aplicado em um método, exibe no console a data na qual o método foi chamado. Contudo, se o decorator receber como parâmetro dd/MM/yyyy, deve exibir a data neste formato.<br>
+        Marque a opção que declara o esqueleto do decorator que Rafaela deseja criar:<br><br>
+        A-) <br>
+        <code>function logData(formato: string = '') {</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;return function(target: any, key: string) {</code><br>
+        <code>&nbsp;&nbsp;    const metodoOriginal = descriptor.value;</code><br>
+        <code>&nbsp;&nbsp;            // aqui vem a lógica do decorator</code><br>
+        <code>&nbsp;&nbsp;    return descriptor;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
+        B-) <br>
+        <code>function logData() {</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;return function(target: any, key: string, descriptor: PropertyDescriptor) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// aqui vem a lógica do decorator</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
+        C-) <b>Correta</b> <br>
+        <code>function logData(formato: string = '') {</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;return function(target: any, key: string, descriptor: PropertyDescriptor) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// aqui vem a lógica do decorator</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
 
-&nbsp;
