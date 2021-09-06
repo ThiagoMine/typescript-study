@@ -2127,9 +2127,9 @@
         <code>function logData(formato: string = '') {</code><br>
 <code></code><br>
         <code>&nbsp;&nbsp;return function(target: any, key: string) {</code><br>
-        <code>&nbsp;&nbsp;    const metodoOriginal = descriptor.value;</code><br>
-        <code>&nbsp;&nbsp;            // aqui vem a lógica do decorator</code><br>
-        <code>&nbsp;&nbsp;    return descriptor;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;        // aqui vem a lógica do decorator</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
         <code>&nbsp;&nbsp;}</code><br>
         <code>}</code><br>
         B-) <br>
@@ -2150,6 +2150,37 @@
         <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
         <code>&nbsp;&nbsp;}</code><br>
         <code>}</code><br>
+    </p>
+</article>
+
+<h3> 03 Criando um Decorator de inspeção </h3>
+<article>
+    <p>   
+        Criando um decorator inspetor que retornara no console o nome do método, seus argumentos e seu retorno.<br>
+        Decorator inspect.ts:<br>
+        <code>export function inspect() {</code><br>
+        <code>&nbsp;&nbsp;return function (</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;target: any,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;propertyKey: string,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;descriptor: PropertyDescriptor</code><br>
+        <code>&nbsp;&nbsp;) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;descriptor.value = function (...args: any[]) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(`--- Método: ${propertyKey}`);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(`------ parâmetros: ${JSON.stringify(args)}`);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const retorno = metodoOriginal.apply(this, args);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(`------ retorno: ${JSON.stringify(retorno)}`);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return retorno;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br><br>
+        Aplicando o decorator ao método update do view.ts:<br>
+        <code>@inspect()</code><br>
+        <code>@logarTempoDeExecucao(true)</code><br>
+        <code>public update(model: T): void {</code><br>
     </p>
 </article>
 
