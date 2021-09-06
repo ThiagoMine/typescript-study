@@ -2128,7 +2128,7 @@
 <code></code><br>
         <code>&nbsp;&nbsp;return function(target: any, key: string) {</code><br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;        // aqui vem a lógica do decorator</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    // aqui vem a lógica do decorator</code><br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
         <code>&nbsp;&nbsp;}</code><br>
         <code>}</code><br>
@@ -2198,6 +2198,35 @@
         A-) Serão aplicados aleatoriamente.<br>
         B-) Serão aplicados do topo para baixo. - <b>Correta</b><br>
         C-) Serão aplicados de baixo para o topo.<br>
+    </p>
+</article>
+
+<h3> 06 Simplificando o Decorator </h3>
+<article>
+    <p>   
+        Quando o decorator não recebe parâmetros podemos não fazer um return da function anônima, logo fazemo o mesmo direto.<br>
+        inspect.ts:<br>
+        <code>export function inspect(</code><br>
+        <code>&nbsp;&nbsp;target: any,</code><br>
+        <code>&nbsp;&nbsp;propertyKey: string,</code><br>
+        <code>&nbsp;&nbsp;descriptor: PropertyDescriptor</code><br>
+        <code>) {</code><br>
+        <code>&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;descriptor.value = function (...args: any[]) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(`--- Método: ${propertyKey}`);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(`------ parâmetros: ${JSON.stringify(args)}`);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const retorno = metodoOriginal.apply(this, args);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(`------ retorno: ${JSON.stringify(retorno)}`);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return retorno;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;return descriptor;</code><br>
+        <code>}</code><br><br>
+        Para chamar um decorator nessa sintaxe não passamos o ():<br>
+        <code>@inspect</code><br>
+        <code>@logarTempoDeExecucao(true)</code><br>
+        <code>public update(model: T): void {</code><br>
     </p>
 </article>
 
