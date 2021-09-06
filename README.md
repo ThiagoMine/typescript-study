@@ -2025,3 +2025,39 @@
     </p>
 </article>
 
+<h3> 08 Recorrendo ao JavaScript </h3>
+<article>
+    <p>   
+        Usando recursos JS para solucionar o problema dos parâmetros e do this<br>
+        Decorator:<br>
+        <code>export function logarTempoDeExecucao() {</code><br>
+        <code>&nbsp;&nbsp;return function(</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;target: any,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;propertyKey: string,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;descriptor: PropertyDescriptor</code><br>
+        <code>&nbsp;&nbsp;) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;descriptor.value = function(...args: any[]) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const t1 = performance.now();</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const retorno = metodoOriginal.apply(this, args);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const t2 = performance.now();</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(`${propertyKey}, tempo de execução: ${(t2-t1)/1000}`)</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retorno;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br><br>
+        Método update da view.ts:<br>
+        <code>@logarTempoDeExecucao()</code><br>
+        <code>public update(model: T): void {</code><br>
+        <code>&nbsp;&nbsp;let template = this.template(model);</code><br>
+        <code>&nbsp;&nbsp;if (this.escapar) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;template = template</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.replace(<-regex->, '');</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;&nbsp;this.elemento.innerHTML = template;</code><br>
+        <code>}</code><br><br>
+    </p>
+</article>
+
