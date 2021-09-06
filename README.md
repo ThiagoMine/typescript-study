@@ -2184,3 +2184,20 @@
     </p>
 </article>
 
+<h3> 04 Ordem de execução dos Decorators </h3>
+<article>
+    <p>   
+        A ordem de excução segue a ordem de instalação do código de cima para baixo, porém ele decora de baixo para cima, ou seja, o o primeiro a ser excutado chama um método já decorado por todos os decorators de baixo para cima.<br>
+    </p>
+</article>
+
+<h3> 05 Decorators e sua origem </h3>
+<article>
+    <p>   
+        Marque a alternativa correta a respeito da ordem de aplicação dos decorators.<br><br>
+        A-) Serão aplicados aleatoriamente.<br>
+        B-) Serão aplicados do topo para baixo. - <b>Correta</b><br>
+        C-) Serão aplicados de baixo para o topo.<br>
+    </p>
+</article>
+
