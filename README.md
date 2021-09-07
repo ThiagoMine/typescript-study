@@ -2343,3 +2343,15 @@
     </p>
 </article>
 
+<h3> 02 Criando nosso próprio DOM Injector </h3>
+<article>
+    <p>   
+        Iniciando a construção do DOM Injector (decorator que fará o recebmento de dados advindos do form):<br>
+        <code>export function domInjector(seletor: string) {</code><br>
+        <code>&nbsp;&nbsp;return function(target: any, propertyKey: string) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
