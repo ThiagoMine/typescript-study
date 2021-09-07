@@ -2448,10 +2448,12 @@
 <h3> 08 Revisão </h3>
 <article>
     <p>   
-        <br>
+        Nesta aula, aprendemos:<br>
+        &nbsp;&nbsp;Como evitar código duplicado<br>
+        &nbsp;&nbsp;Decorator de propriedade<br>
+        &nbsp;&nbsp;Criação dinâmica de getters<br>
+        &nbsp;&nbsp;O uso de Object.defineProperty<br>
+        &nbsp;&nbsp;Cache de decorators<br>
     </p>
 </article>
 
-<b>Correta</b>
-
-&nbsp;
