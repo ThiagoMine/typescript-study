@@ -2421,3 +2421,27 @@
     </p>
 </article>
 
+<h3> 07 Aplicando cache decorator copy </h3>
+<article>
+    <p>   
+        Aplicando o cache verificando se o elemento já não é mais undefined: <br>
+        <code>export function domInjector(seletor: string) {</code><br>
+        <code>&nbsp;&nbsp;return function(target: any, propertyKey: string) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;let elemento: HTMLElement;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const getter = function() {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!elemento) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elemento = <HTMLElement>document.querySelector(seletor);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return elemento;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;Object.defineProperty(</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target, </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;propertyKey, </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ get: getter }</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;);</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
