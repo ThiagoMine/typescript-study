@@ -2417,10 +2417,7 @@
 <h3> 06 Um problema não esperado </h3>
 <article>
     <p>   
-        <br>
+        Fazendo uma revisão nota-se que o getter é executado em toda adição e não mais somente no construtor como antigamente, aqui definimos que teremos que fazer um cache desse elemento para qunado o mesmo já tiver sido instanciado uma vez não haja a necesssidade de refazer essa ação.<br>
     </p>
 </article>
 
-<b>Correta</b>
-
-&nbsp;
