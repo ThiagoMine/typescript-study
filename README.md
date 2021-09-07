@@ -2414,3 +2414,13 @@
     </p>
 </article>
 
+<h3> 06 Um problema não esperado </h3>
+<article>
+    <p>   
+        <br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
