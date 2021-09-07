@@ -2294,7 +2294,6 @@
         <code>&nbsp;&nbsp;@domInject("#valor")</code><br>
         <code>&nbsp;&nbsp;private inputValor: HTMLInputElement;</code><br>
         <code>&nbsp;&nbsp;private negociacoes = new Negociacoes();</code><br>
-        <code>&nbsp;&nbsp;private negociacoesView = new NegociacoesView<code>
         <code>&nbsp;&nbsp;private negociacoesView = new NegociacoesView('#negociacoesView');</code><br>
         <code>&nbsp;&nbsp;private mensagemView = new MensagemView('#mensagemView');</code><br>
 <code></code><br>
