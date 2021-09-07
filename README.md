@@ -2128,7 +2128,7 @@
 <code></code><br>
         <code>&nbsp;&nbsp;return function(target: any, key: string) {</code><br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;const metodoOriginal = descriptor.value;</code><br>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    // aqui vem a lógica do decorator</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// aqui vem a lógica do decorator</code><br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;return descriptor;</code><br>
         <code>&nbsp;&nbsp;}</code><br>
         <code>}</code><br>
@@ -2267,6 +2267,79 @@
         &nbsp;&nbsp;Ordem de execução dos decorators<br>
         &nbsp;&nbsp;Simplicação no design de decorators<br>
         &nbsp;&nbsp;Portabilidade de funcionalidade antiga para decorators<br>
+    </p>
+</article>
+
+<hr>
+
+<h2>Aula 3</h2>
+
+<h3> 01 Evitando código duplicado mais uma vez </h3>
+<article>
+    <p>   
+        Iniciando a chamada do decorator de propriedade, que será criado postetriormente para facilitar a captura de elementos do DOM:<br>
+        <code>import { inspect } from '../decorators/inspect.js';</code><br>
+        <code>import { logarTempoDeExecucao } from '../decorators/</code><code>logar-tempo-de-execucao.js';</code><br>
+        <code>import { DiasDaSemana } from '../enums/dias-da-semana.js';</code><br>
+        <code>import { Negociacao } from '../models/negociacao.js';</code><br>
+        <code>import { Negociacoes } from '../models/negociacoes.js';</code><br>
+        <code>import { MensagemView } from '../views/mensagem-view.js';</code><br>
+        <code>import { NegociacoesView } from '../views/negociacoes-view.</code>js';<br>
+<code></code><br>
+        <code>export class NegociacaoController {</code><br>
+        <code>&nbsp;&nbsp;@domInject("#data")</code><br>
+        <code>&nbsp;&nbsp;private inputData: HTMLInputElement;</code><br>
+        <code>&nbsp;&nbsp;@domInject("#quantidade")</code><br>
+        <code>&nbsp;&nbsp;private inputQuantidade: HTMLInputElement;</code><br>
+        <code>&nbsp;&nbsp;@domInject("#valor")</code><br>
+        <code>&nbsp;&nbsp;private inputValor: HTMLInputElement;</code><br>
+        <code>&nbsp;&nbsp;private negociacoes = new Negociacoes();</code><br>
+        <code>&nbsp;&nbsp;private negociacoesView = new NegociacoesView<code><code>&nbsp;&nbsp;private negociacoesView = new NegociacoesView</code>('#negociacoesView');<br>
+        <code>&nbsp;&nbsp;private mensagemView = new MensagemView('#mensagemView');</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;constructor() {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoesView.update(this.negociacoes);</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;@inspect</code><br>
+        <code>&nbsp;&nbsp;@logarTempoDeExecucao()</code><br>
+        <code>&nbsp;&nbsp;public adiciona(): void {</code><br>
+        <code>&nbsp;&nbsp;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const negociacao = Negociacao.criaDe(</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.inputData.value, </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.inputQuantidade.value,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.inputValor.value</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;);</code><br>
+        <code>&nbsp;&nbsp;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;if (!this.ehDiaUtil(negociacao.data)) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.mensagemView</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.update('Apenas negociações em dias úteis </code>são <code>aceitas');são </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoes.adiciona(negociacao);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.limparFormulario();</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.atualizaView();</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;private ehDiaUtil(data: Date) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return data.getDay() > DiasDaSemana.DOMINGO </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&& data.getDay() < DiasDaSemana.SABADO;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;private limparFormulario(): void {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.inputData.value = '';</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.inputQuantidade.value = '';</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.inputValor.value = '';</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.inputData.focus();</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;private atualizaView(): void {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoesView.update(this.negociacoes);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.mensagemView.update('Negociação adicionada com </code><code>sucesso');</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
     </p>
 </article>
 
