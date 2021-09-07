@@ -2370,3 +2370,26 @@
     </p>
 </article>
 
+<h3> 04 Object.defineProperty </h3>
+<article>
+    <p>   
+        Usando a prerrogativa Object.defineProperty para alterar a definição da propriedade para o getter já definido:<br>
+        <code>export function domInjector(seletor: string) {</code><br>
+        <code>&nbsp;&nbsp;return function(target: any, propertyKey: string) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const getter = function() {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const elemento = document.querySelector(seletor);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(`Buscando elemento do DOM com seletor ${seletor} para</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inserir em ${propertyKey}`);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return elemento;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;Object.defineProperty(</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target, </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;propertyKey, </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ get: getter }</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;);</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
