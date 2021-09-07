@@ -2355,3 +2355,18 @@
     </p>
 </article>
 
+<h3> 03 Criando getters dinamicamente </h3>
+<article>
+    <p>   
+        Criando um getter dinâmico para resolver o problema da falta de acesso a instância da classe:<br>
+        <code>export function domInjector(seletor: string) {</code><br>
+        <code>&nbsp;&nbsp;return function(target: any, propertyKey: string) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const getter = function() {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const elemento = document.querySelector(seletor);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return elemento;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
