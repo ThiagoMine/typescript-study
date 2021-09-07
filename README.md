@@ -2393,3 +2393,24 @@
     </p>
 </article>
 
+<h3> 05 Decorator de propriedade </h3>
+<article>
+    <p>   
+        Segue o código de um decorator de propriedade:<br>
+        <code>export function domInjector(seletor: string) {</code><br>
+        <code>&nbsp;&nbsp;return function(target: any, propertyKey: string) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(`Modificando protype ${target.constructor.name}</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e adicionando getter para a propriedade ${propertyKey}`);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const getter = function() {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const elemento = <HTMLElement>document.querySelector(seletor);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return elemento;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br><br>
+        A-) Funciona como esperado.<br>
+        B-) Faltou aplicar o getter criado à propriedade definida pela variável propertyKey através de Object.defineProperty. - <b>Correta</b><br>
+        C-) Há um erro de compilação.<br>
+    </p>
+</article>
+
