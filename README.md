@@ -2471,7 +2471,8 @@
 
 <h3> 02 Alterando nossa página </h3>
 <article>
-    <p>   
+    <p> 
+        Iniciando a implementação da integração com a api.<br>  
         01 no index.html criar o botão importar:<br>
         <code>&lt;button class="btn btn-primary" id="botao-importa"&gt;Importar&lt;/button&gt;</code><br><br>
         02 na controller negociacao-controller.ts criamos o método importaDados:<br>
