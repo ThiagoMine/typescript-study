@@ -2457,3 +2457,18 @@
     </p>
 </article>
 
+<hr>
+
+<h2>Aula 4</h2>
+
+<h3> 01 API externa </h3>
+<article>
+    <p>   
+        1 Fazxer npm install da api<br>
+        2 Fazer o npm start da API<br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
