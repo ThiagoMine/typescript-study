@@ -2492,3 +2492,29 @@
     </p>
 </article>
 
+<h3> 03 Consumindo uma API </h3>
+<article>
+    <p>   
+        Iniciando o consumo de API usando o fetch no método importaDados:<br>
+        <code>public importaDados():void {</code><br>
+        <code>&nbsp;&nbsp;fetch("http://localhost:8080/dados")</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;.then(res => res.json())</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;.then((dados: any[]) => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return dados.map(dado => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new Negociacao(</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new Date(),</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dado.vezes,</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dado.montante</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;})</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;.then(negociacoesDeHoje => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (let negociacao of negociacoesDeHoje) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoes.adiciona(negociacao);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoesView.update(this.negociacoes);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;});</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
