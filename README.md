@@ -2469,6 +2469,25 @@
     </p>
 </article>
 
-<b>Correta</b>
+<h3> 02 Alterando nossa página </h3>
+<article>
+    <p>   
+        01 no index.html criar o botão importar:<br>
+        <code>&lt;button class="btn btn-primary" id="botao-importa"&gt;Importar&lt;/button&gt;</code><br><br>
+        02 na controller negociacao-controller.ts criamos o método importaDados:<br>
+        <code>importaDados():void {</code><br>
+        <code>&nbsp;&nbsp;alert('oi');</code><br>
+        <code>}</code><br><br>
+        03 em app.ts Criar prevenção e listener:<br>
+        <code>const botaoImporta = document.querySelector('#botao-importa');</code><br>
+<code></code><br>
+        <code>if (botaoImporta) {</code><br>
+        <code>&nbsp;&nbsp;botaoImporta.addEventListener('click', () => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;controller.importaDados();</code><br>
+        <code>&nbsp;&nbsp;})</code><br>
+        <code>} else {</code><br>
+        <code>&nbsp;&nbsp;throw Error('Botão importa não foi encontrado')</code><br>
+        <code>}</code><br>
+    </p>
+</article>
 
-&nbsp;
