@@ -2534,3 +2534,89 @@
     </p>
 </article>
 
+<h3> 05 API externa </h3>
+<article>
+    <p>   
+        Clarice precisava buscar os dados de uma API que retorna os dados dos alunos matriculados em sua turma.<br>
+        Vejamos um exemplo:<br><br>
+        <code>fetch('http://endereco-da-api.com.br/alunos/1')</code><br>
+        <code>&nbsp;&nbsp;.then(res => res.json())</code><br>
+        <code>&nbsp;&nbsp;.then((aluno: any) => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(aluno.nome);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(aluno.matricula);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;// faz algo com o aluno</code><br>
+        <code>&nbsp;&nbsp;});</code><br>
+        5 meses depois, a API que ela utilizava mudou a propriedade matricula para inscricao. Com certeza a aplicação de Clarice se comportou erradamente. Então, ela foi e alterou seu código para:<br><br>
+        <code>fetch('http://endereco-da-api.com.br/alunos/1')</code><br>
+        <code>&nbsp;&nbsp;.then(res => res.json())</code><br>
+        <code>&nbsp;&nbsp;.then((aluno: any) => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(aluno.nome);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;// modificou aqui! Veja que ela escreveu errado!</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(aluno.inscrica);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;// faz algo com o aluno</code><br>
+        <code>&nbsp;&nbsp;});</code><br>
+        No entanto, ao realizar a correção, ela escreveu errado o nome da propriedade inscricao. Novamente, ela só descobriu o problema em runtime para então realizar o ajuste final:<br><br>
+        <code>fetch('http://endereco-da-api.com.br/alunos/1')</code><br>
+        <code>&nbsp;&nbsp;.then(res => res.json())</code><br>
+        <code>&nbsp;&nbsp;.then((aluno: any) => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(aluno.nome);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;// modificou aqui! Veja que ela escreveu corretamente.</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(aluno.inscricao);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;// faz algo com o aluno</code><br>
+        <code>&nbsp;&nbsp;});</code><br>
+        Se Clarice tivesse definido uma interface (um formato) para os dados recebidos do servidor, além das alterações serem mais fáceis de realizar, ela não teria como cometer o erro que cometeu escrevendo inscrica em vez de inscricao.<br>
+        Marque a alternativa que cria a interface Aluno que define as propriedades mais recentes da API. Inclusive, aquela que tipa corretamente o retorno.<br><br>
+        A-) - <b>Correta</b><br>
+        <code>export interface Aluno {</code><br>
+        <code>&nbsp;&nbsp;nome: string;</code><br>
+        <code>&nbsp;&nbsp;inscricao: string</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>fetch('http://endereco-da-api.com.br/alunos/1')</code><br>
+        <code>.then(res => res.json())</code><br>
+        <code>.then((aluno: Aluno) => {</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;console.log(aluno.nome);</code><br>
+        <code>&nbsp;&nbsp;console.log(aluno.inscricao);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;// faz algo com o aluno</code><br>
+        <code>});      </code><br><br>
+        B-)<br>
+        <code>export interface Aluno {</code><br>
+        <code>&nbsp;&nbsp;nome: string;</code><br>
+        <code>&nbsp;&nbsp;inscricao: string</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>fetch('http://endereco-da-api.com.br/alunos/1')</code><br>
+        <code>.then(res => res.json())</code><br>
+        <code>.then((aluno: any) => {</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;console.log(aluno.nome);</code><br>
+        <code>&nbsp;&nbsp;console.log(aluno.inscricao);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;// faz algo com o aluno</code><br>
+        <code>});       </code><br><br>
+        C-)<br>
+        <code>export interface Aluno {</code><br>
+        <code>&nbsp;&nbsp;public nome: string;</code><br>
+        <code>&nbsp;&nbsp;public inscricao: string</code><br>
+        <code>}</code><br>
+<code></code><br>
+        <code>fetch('http://endereco-da-api.com.br/alunos/1')</code><br>
+        <code>// código omitido </code><br>
+        <code>.then(res => res.json())</code><br>
+        <code>.then((aluno: Aluno) => {</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;console.log(aluno.nome);</code><br>
+        <code>&nbsp;&nbsp;console.log(aluno.inscricao);</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;// faz algo com o aluno</code><br>
+        <code>});</code><br>
+    </p>
+</article>
+
