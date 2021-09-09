@@ -2518,3 +2518,19 @@
     </p>
 </article>
 
+<h3> 04 Definindo uma interface para a API </h3>
+<article>
+    <p>   
+        Tratando os dados vindos da API<br>
+        01 Criando pasta de intefaces<br>
+        02 Criando a interface negociacao-do-dia.ts, que modelará o objeto advindo da API:<br>
+        <code>export interface NegociacoesDoDia {</code><br>
+        <code>&nbsp;&nbsp;montante: number;</code><br>
+        <code>&nbsp;&nbsp;vezes: number;</code><br>
+        <code>}</code><br>
+        03 Utilizando a interface:<br>
+        <code>.then((dados: NegociacoesDoDia[]) => {</code><br>
+        Obs: quando usamos a interface temos o recurso do rename Symbol.<br>
+    </p>
+</article>
+
