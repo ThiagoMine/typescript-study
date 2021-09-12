@@ -2715,3 +2715,79 @@
     </p>
 </article>
 
+<h3> 03 Polimorfismo </h3>
+<article>
+    <p>   
+        Blindando a função imprimir para que só receba parametros que contenham o método paraTexto, ou seja, removendo o any[]<br><br>
+        01 Criando o util imprimivel.ts, classe abstrata responsável por obrigar os models a implementar o método paraTexto e ser o tipo que a função imprimir ira requisitar (pois obrigatóriamente terá o método paraTexto):<br>
+        <code>export abstract class imprimivel {</code><br>
+        <code>&nbsp;&nbsp;public abstract paraTexto(): string;</code><br>
+        <code>}</code><br><br>
+        02 Aplicar o imprimivel no model negociacao.ts:<br>
+        <code>import { imprimivel } from "../utils/imprimivel.js";</code><br>
+<code></code><br>
+        <code>export class Negociacao extends imprimivel {</code><br>
+        <code>&nbsp;&nbsp;constructor(</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;private _data: Date, </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;public readonly quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;public readonly valor: number</code><br>
+        <code>&nbsp;&nbsp;) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;super();</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;public static criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const exp = /-/g;</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const date = new Date(dataString.replace(exp, ','));</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const quantidade = parseInt(quantidadeString);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const valor = parseFloat(valorString);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return new Negociacao(date, quantidade, valor);</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;get volume(): number {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return this.quantidade * this.valor;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;get data(): Date {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;const data = new Date(this._data.getTime());</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return data;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;public paraTexto(): string {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return `</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data: ${this.data},</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantidade: ${this.quantidade},</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Valor: ${this.valor}</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;`;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br><br>
+        03 Aplicar o imprimivel no model negociacoes.ts:<br>
+        <code>import { imprimivel } from '../utils/imprimivel.js';</code><br>
+        <code>import { Negociacao } from './negociacao.js';</code><br>
+<code></code><br>
+        <code>export class Negociacoes extends imprimivel {</code><br>
+        <code>&nbsp;&nbsp;private negociacoes: Negociacao[] = [];</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;public adiciona(negociacao: Negociacao) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoes.push(negociacao);</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;public lista(): readonly Negociacao[] {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return this.negociacoes;</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+<code></code><br>
+        <code>&nbsp;&nbsp;public paraTexto(): string {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return JSON.stringify(this, null, 2);</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br><br>
+        04 Alterando o tipo que a função imprimir recebe de any para imprimivel:<br>
+        <code>import { imprimivel } from "./imprimivel.js";</code><br>
+<code></code><br>
+        <code>export function imprimir(...objetos: imprimivel[]) {</code><br>
+        <code>&nbsp;&nbsp;for (let objeto of objetos) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(objeto.paraTexto());</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br><br>
+        obs: o comando super(); chama o construtor da classe pai, item obrigatório quando o filho está sobrescrevendo o construtor pai;<br>
+    </p>
+</article>
+
