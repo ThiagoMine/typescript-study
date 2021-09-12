@@ -2791,3 +2791,27 @@
     </p>
 </article>
 
+<h3> 04 Interface e métodos </h3>
+<article>
+    <p>   
+        Melhorando o a função imprimir, transformando o imprimivel em uma interface e não em uma classe.<br><br>
+        01 Alterando o imprimivel para tornar-se uma interrface:<br>
+        <code>export interface imprimivel {</code><br>
+        <code>&nbsp;&nbsp;paraTexto(): string;</code><br>
+        <code>}</code><br><br>
+        02 Trocando no negociacao.ts de extends para implements, não esquecendo de remover o super do construtor pois como o imprimivel não é mais uma classe o mesmo não possui mais um construtor:<br>
+        <code>export class Negociacao implements imprimivel {</code><br>
+        <code>constructor(</code><br>
+        <code>&nbsp;&nbsp;private _data: Date, </code><br>
+        <code>&nbsp;&nbsp;public readonly quantidade: number, </code><br>
+        <code>&nbsp;&nbsp;public readonly valor: number</code><br>
+        <code>) {}</code><br><br>
+        03 Trocando no negociacoes.ts de extends para implements:<br>
+        <code>export class Negociacoes implements imprimivel {</code><br><br>
+        Obs: toda interface é publica e seus métodos são abstratos, sendo que interfaces (implements) podem ser implementadas qantas forem necessárias já classes abstratas (extends) podem ser utilizadas somente uma.<br>
+    </p>
+</article>
+
+<b>Correta</b>
+
+&nbsp;
