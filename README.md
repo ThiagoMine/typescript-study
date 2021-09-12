@@ -2676,24 +2676,24 @@
 <h3> 01 Chega de múltiplos console.log </h3>
 <article>
     <p>
-        Criando uma solução para impressão da classe (models) chamada paraTexto, que imprime em um console log os valores da transação:
-        01 Na model negociacao.ts:
-        <code>public paraTexto(): string {</code>
-        <code>&nbsp;&nbsp;return `</code>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;Data: ${this.data},</code>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;Quantidade: ${this.quantidade},</code>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;Valor: ${this.valor}</code>
-        <code>&nbsp;&nbsp;`;</code>
-        <code>}</code>
-        02 Na model negociacoes.ts:
-        <code>public paraTexto(): string {</code>
-        <code>&nbsp;&nbsp;return JSON.stringify(this, null, 2);</code>
-        <code>}</code>
-        03 Implementando na negociacao-controller.ts no método adiciona:
-        <code>this.negociacoes.adiciona(negociacao);</code>
-        <code>console.log(negociacao.paraTexto());</code>
-        <code>console.log(this.negociacoes.paraTexto());</code>
-        Obs: JSON.stringify(Var, null, 2) imprime o json identado e com 2 de espaçamento
+        Criando uma solução para impressão da classe (models) chamada paraTexto, que imprime em um console log os valores da transação:<br><br>
+        01 Na model negociacao.ts:<br>
+        <code>public paraTexto(): string {</code><br>
+        <code>&nbsp;&nbsp;return `</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;Data: ${this.data},</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;Quantidade: ${this.quantidade},</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;Valor: ${this.valor}</code><br>
+        <code>&nbsp;&nbsp;`;</code><br>
+        <code>}</code><br><br>
+        02 Na model negociacoes.ts:<br>
+        <code>public paraTexto(): string {</code><br>
+        <code>&nbsp;&nbsp;return JSON.stringify(this, null, 2);</code><br>
+        <code>}</code><br><br>
+        03 Implementando na negociacao-controller.ts no método adiciona:<br>
+        <code>this.negociacoes.adiciona(negociacao);</code><br>
+        <code>console.log(negociacao.paraTexto());</code><br>
+        <code>console.log(this.negociacoes.paraTexto());</code><br><br>
+        Obs: JSON.stringify(Var, null, 2) imprime o json identado e com 2 de espaçamento<br>
     </p>
 </article>
 
