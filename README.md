@@ -2658,3 +2658,14 @@
     </p>
 </article>
 
+<h3> 07 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;&nbsp;API externa<br>
+        &nbsp;&nbsp;Consumindo API externa<br>
+        &nbsp;&nbsp;Definindo uma interface para a API<br>
+        &nbsp;&nbsp;Isolando o acesso à API em um serviço<br>
+    </p>
+</article>
+
