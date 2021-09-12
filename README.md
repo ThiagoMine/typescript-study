@@ -2669,3 +2669,31 @@
     </p>
 </article>
 
+<hr>
+
+<h2>Aula 5</h2>
+
+<h3> 01 Chega de múltiplos console.log </h3>
+<article>
+    <p>
+        Criando uma solução para impressão da classe (models) chamada paraTexto, que imprime em um console log os valores da transação:
+        01 Na model negociacao.ts:
+        <code>public paraTexto(): string {</code>
+        <code>&nbsp;&nbsp;return `</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;Data: ${this.data},</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;Quantidade: ${this.quantidade},</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;Valor: ${this.valor}</code>
+        <code>&nbsp;&nbsp;`;</code>
+        <code>}</code>
+        02 Na model negociacoes.ts:
+        <code>public paraTexto(): string {</code>
+        <code>&nbsp;&nbsp;return JSON.stringify(this, null, 2);</code>
+        <code>}</code>
+        03 Implementando na negociacao-controller.ts no método adiciona:
+        <code>this.negociacoes.adiciona(negociacao);</code>
+        <code>console.log(negociacao.paraTexto());</code>
+        <code>console.log(this.negociacoes.paraTexto());</code>
+        Obs: JSON.stringify(Var, null, 2) imprime o json identado e com 2 de espaçamento
+    </p>
+</article>
+
