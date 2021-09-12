@@ -2697,3 +2697,21 @@
     </p>
 </article>
 
+<h3> 02 A função utilitária imprimir </h3>
+<article>
+    <p>   
+        Eliminando a chamada de console.log multiplas vezes chamando uma única função chamada imprimir: <br><br>
+        01 Criando a Pasta Utils e a função imprimir:<br>
+        <code>import { Negociacao } from "../models/negociacao";</code><br>
+<code></code><br>
+        <code>export function imprimir(...objetos: any[]) {</code><br>
+        <code>&nbsp;&nbsp;for (let objeto of objetos) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;console.log(objeto.paraTexto());</code><br>
+        <code>&nbsp;&nbsp;}</code><br>
+        <code>}</code><br><br>
+        02 Trocando os console.log pela função imprimir:<br>
+        <code>this.negociacoes.adiciona(negociacao);</code><br>
+        <code>imprimir(negociacao, this.negociacoes);</code><br>
+    </p>
+</article>
+
