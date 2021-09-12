@@ -2620,3 +2620,41 @@
     </p>
 </article>
 
+<h3> 06 Camada de serviços </h3>
+<article>
+    <p>   
+        Isolando a consulta em um único lugar
+        01 Criando a pasta services em src e o arquivo negociações service, utilizando o fetch já criado no método importaDados da negociacao-controller:
+        <code>import { NegociacoesDoDia } from "../interfaces/negociacao-do-dia.js";</code>
+        <code>import { Negociacao } from "../models/negociacao.js";</code>
+<code></code>
+        <code>export class NegociacoesService {</code>
+        <code>&nbsp;&nbsp;public obterNegociacoesDoDia(): Promise<Negociacao[]> {</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;return fetch("http://localhost:8080/dados")</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(res => res.json())</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then((dados: NegociacoesDoDia[]) => {</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return dados.map(dado => {</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new Negociacao(</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new Date(),</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dado.vezes,</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dado.montante</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}) </code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+        <code>&nbsp;&nbsp;}</code>
+        <code>}</code>
+        02 Alterar método importaDados da negociacao-controller para utilizar o service e não mais fazer o fetch:
+        <code>public importaDados():void {</code>
+        <code>&nbsp;&nbsp;this.negociacoesService</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;.obterNegociacoesDoDia()</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;.then(negociacoesDeHoje => {</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (let negociacao of negociacoesDeHoje) {</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoes.adiciona(negociacao);</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoesView.update(this.negociacoes);</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;});</code>
+        <code>}</code>
+    </p>
+</article>
+
