@@ -3046,3 +3046,15 @@
     </p>
 </article>
 
+<h3> 12 Revisão </h3>
+<article>
+    <p>   
+        Nesta aula, aprendemos:<br>
+        &nbsp;&nbsp;Chega de múltiplos console.log<br>
+        &nbsp;&nbsp;Aplicação prática do Polimorfismo<br>
+        &nbsp;&nbsp;Interface de método<br>
+        &nbsp;&nbsp;Evitando importar negociações duplicadas<br>
+        &nbsp;&nbsp;Estendendo interfaces<br>
+        &nbsp;&nbsp;Geração de sourmaps e debug da aplicação no navegador<br>
+    </p>
+</article>
