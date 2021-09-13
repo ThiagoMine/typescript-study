@@ -3039,3 +3039,10 @@
     </p>
 </article>
 
+<h3> 11 Debugando sua aplicações </h3>
+<article>
+    <p>   
+        Para rodar o debug devemos primeiro no souce map do projeto fazer com que a pasta dist e a pasta src compartilhem a mesma origem, setar a propriedade source map como true no tsconfig.json e então no navegador na aba Sources do inspetor, utilizando o ctrl+p buscar o arquivo a ser debugado e adicionar o breakpoint.
+    </p>
+</article>
+
