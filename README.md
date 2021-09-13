@@ -2972,3 +2972,24 @@
     </p>
 </article>
 
+<h3> 07 Interface com Generics </h3>
+<article>
+    <p>   
+        Aplicar é igual para todos os objetos comparaveis.<br><br>
+        01 Criar interface comparavel.ts, usando o generics &lt;T&gt; como tipo do parâmetro racebido pois quem definirá este tipo é quem o implementará:<br>
+        <code>export interface Comparavel&lt;T&gt; {</code><br>
+        <code>&nbsp;&nbsp;ehIgual(objeto: T): boolean;</code><br>
+        <code>}</code><br><br>
+        02 Em negociacao.ts implementar a interface comparavel, note que apenas precisamos declar a implementação do mesmo definindo o tipo, pois já tinhamos o método ehIgual implementado:<br>
+        <code>export class Negociacao implements Imprimivel, Comparavel&lt;Negociacao&gt; </code><br><br>
+        03 Em negociacoes.ts implementar a interface comparavel, note que precisamos declar a implementação do mesmo definindo o tipo e definir o método ehIgual:<br>
+        <code>export class Negociacoes implements Imprimivel, Comparavel&lt;Negociacao&gt; {</code><br>
+        <code>.</code><br>
+        <code>.</code><br>
+        <code>.</code><br>
+        <code>public ehIgual(negociacoes: Negociacoes): boolean {</code><br>
+        <code>&nbsp;&nbsp;return JSON.stringify(this.negociacoes) === JSON.stringify(negociacoes.lista());</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
