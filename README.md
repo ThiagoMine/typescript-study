@@ -3012,3 +3012,14 @@
     </p>
 </article>
 
+<h3> 09 Sabatina </h3>
+<article>
+    <p>   
+        Marque apenas as opções verdadeiras à respeito do que aprendemos ao longo do curso, Selecione 2 alternativas:<br><br>
+        A-) Uma interface pode estender outras interfaces. - <b>Correta</b><br>
+        B-) Uma classe em TypeScript suporta herança múltipla com a sintaxe extends.<br>
+        C-) Não existe polimorfismo em TypeScript.<br>
+        D-) Uma classe em TypeScript pode implementar quantas interfaces for necessário. - <b>Correta</b><br>
+    </p>
+</article>
+
