@@ -2993,3 +2993,22 @@
     </p>
 </article>
 
+<h3> 08 Estendendo interfaces </h3>
+<article>
+    <p>   
+        Se temos mais de uma interface que são implementadas em todos os objetos, podemos criar uma interface que extenda as demais interfaces facilitando a aplicanção destas nas classes. <br><br>
+        01 Criar a interface Modelo:<br>
+        <code>import { Imprimivel } from "../utils/imprimivel.js";</code><br>
+        <code>import { Comparavel } from "./comparavel.js";</code><br>
+        <code>export interface Modelo&ltT&gt; extends Imprimivel, Comparavel&ltT&gt;{ // neste caso o type &ltT&gt; obtido em objeto é delegado para Comparavel</code><br>
+        <code>}</code><br><br>
+        02 Em negociacao.ts alterar a implementação das interfaces Imprimivel e Comparavel para a interface Modelo:<br>
+        <code>import { Modelo } from "../interfaces/modelo.js";</code><br>
+        <code>export class Negociacao implements Modelo&lt;Negociacao&gt; {</code><br><br>
+        03 Em negociacoes.ts alterar a implementação das interfaces Imprimivel e Comparavel para a interface Modelo:<br>
+        <code>import { Modelo } from '../interfaces/modelo.js';</code><br>
+        <code>import { Negociacao } from './negociacao.js';</code><br>
+        <code>export class Negociacoes implements Modelo&lt;Negociacao&gt; {</code><br>
+    </p>
+</article>
+
