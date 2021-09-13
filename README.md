@@ -2939,3 +2939,36 @@
     </p>
 </article>
 
+<h3> 06 Evitando importar negociações duplicadas </h3>
+<article>
+    <p>   
+        Evitar que possamos importar duplicas da API<br><br>
+        01 Criar o método é igual no model negociacao.ts:<br>
+        <code>public ehIgual(negociacao: Negociacao): boolean {</code><br>
+        <code>&nbsp;&nbsp;return this.data.getDate() === negociacao.data.getDate()</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&& this.data.getMonth() === negociacao.data.getMonth()</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&& this.data.getFullYear() === negociacao.data.getFullYear();</code><br>
+        <code>}</code><br><br>
+        02 No método importaDados fazer filtro que implemente o método ehIgual da negociação:<br>
+        <code>public importaDados():void {</code><br>
+        <code>&nbsp;&nbsp;this.negociacoesService</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;.obterNegociacoesDoDia()</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;.then(negociacoesDeHoje => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return negociacoesDeHoje.filter(negociacaoDeHoje => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return !this.negociacoes</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.lista()</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.some(negociacao => negociacao</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.ehIgual(negociacaoDeHoje)</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;})</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;.then(negociacoesDeHoje => {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (let negociacao of negociacoesDeHoje) {</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoes.adiciona(negociacao);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.negociacoesView.update(this.negociacoes);</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;});</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
