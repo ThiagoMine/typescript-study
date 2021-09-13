@@ -3023,3 +3023,19 @@
     </p>
 </article>
 
+<h3> 10 Sintaxe inválida </h3>
+<article>
+    <p>   
+        Marque a única opção que apresenta uma sintaxe inválida no uso de herança e interfaces.<br><br>
+        A-)<br>
+        <code>class a extends b implements c {</code><br>
+        <code>}</code><br>
+        B-)<br>
+        <code>class a extends b implements c, d, e, f {</code><br>
+        <code>}</code><br>
+        C-) - <b>Correta</b><br>
+        <code>class a extends b, c implements d {</code><br>
+        <code>}</code><br>
+    </p>
+</article>
+
